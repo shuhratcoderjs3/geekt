@@ -1,0 +1,26 @@
+.btn-img[data-v-e648039c] {
+  width: 30px !important;
+  height: 30px !important;
+}
+.btn[data-v-e648039c] {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 4px;
+  bottom: 4px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  opacity: 1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
+  background-color: initial;
+}
+.accent-color-fill {
+  fill: rgb(228, 218, 77) !important;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet{
+  background-color: black !important;
+}

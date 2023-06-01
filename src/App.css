@@ -47,6 +47,10 @@ img {
   overflow: hidden;
 }
 
+.app.-mobile .btn[data-v-e648039c]{
+  width: 30px !important;
+  height: 30px !important;
+}
 
 /* CONTAINER */
 .container {

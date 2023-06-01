@@ -25,6 +25,7 @@
   line-height: 1.2em;
   font-size: 40px;
   margin-top: 0;
+  color: #fff;
 }
 
 .contact-address{
@@ -33,6 +34,7 @@
   margin-top: 0;
   margin-bottom: 10px;
   font-style: normal;
+  color: #fff;
 }
 
 .contact-linkbox{
@@ -40,6 +42,7 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 50px;
+  color: #fff;
 }
 
 .contact-mailto{
@@ -48,7 +51,17 @@
   margin-top: 0;
   margin-bottom: 0px;
   font-style: normal;
-  color: #000;
+  color: #fff;
+}
+
+.contact-socila-link{
+  color:#fff;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-socila-link:hover{
+  color: #ffca2f;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .contact-social-list{
@@ -59,7 +72,7 @@
 
 .contact-input{
   border: none;
-  border-bottom: 1px solid #ffca2f;
+  border-bottom: 1px solid #445760;
   outline: none;
   padding-bottom: 10px;
   font-size: 16px;
@@ -87,6 +100,7 @@
 .placeholder-title{
   margin-top: 0;
   margin-bottom: 10px;
+  color: #000;
 }
 
 
@@ -102,7 +116,7 @@
 .email-input{
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #ffca2f;
+  border-bottom: 1px solid #445760;
   outline: none;
   padding-bottom: 10px;
   font-size: 16px;
@@ -118,7 +132,7 @@
 .textArea{
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #ffca2f;
+  border-bottom: 1px solid #445760;
   outline: none;
   font-size: 16px;
   margin-bottom: 30px;

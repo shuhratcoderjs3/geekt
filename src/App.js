@@ -19,7 +19,7 @@ function App() {
       <Reviews />
       <OurClients />
       <Contact />
-      <Footer/>
+      <Footer />
     </>
   );
 }
