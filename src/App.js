@@ -1,6 +1,8 @@
 import './App.css';
 import AboutUs from './components/AboutUs';
+import Contact from './components/Contact';
 import Facts from './components/Facts';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import OurClients from './components/OurClients';
@@ -15,7 +17,9 @@ function App() {
       <Facts />
       <AboutUs />
       <Reviews />
-      <OurClients/>
+      <OurClients />
+      <Contact />
+      <Footer/>
     </>
   );
 }
