@@ -1,0 +1,42 @@
+.AboutUs-section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(../../assets/images/background-about.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.AboutUs-section-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.AboutUs-section-desc{
+  width: 100%;
+  max-width: 400px;
+  line-height: 1.5em;
+  font-size: 18px;
+}
+
+.AboutUs-section-title{
+  line-height: 1.1em;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #ffca2f;
+}
+
+.AboutUs-section-subtitle{
+  width: 100%;
+  max-width: 500px;
+  line-height: 1.2em;
+  font-size: 40px;
+  margin-top: 0;
+}
+
