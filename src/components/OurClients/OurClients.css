@@ -1,0 +1,23 @@
+.OurClients-section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.OurClients-section-title{
+  color: #ffca2f;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.OurClients-section-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
