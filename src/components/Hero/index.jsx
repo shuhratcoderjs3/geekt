@@ -5,7 +5,7 @@ const Hero = () => {
     <>
       <section className='hero-section'>
         <div className="container">
-          <div className='hero-section-box'>
+          <div data-aos="fade-up" className='hero-section-box'>
             <h1 className='hero-section-title'>Решения для бизнеса</h1>
             <p className='hero-section-subtitle'>
             Это текст. Нажмите здесь, чтобы изменить его.​

@@ -13,7 +13,7 @@ const Reviews = () => {
   return (
     <>
       <section className="swiper-section" id="reviews">
-        <div className="container">
+        <div data-aos="flip-up" className="container">
           <h2 className="Reviews-title">
           ОТЗЫВЫ
           </h2>

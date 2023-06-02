@@ -4,7 +4,7 @@ const OurClients = () => {
   return (
     <>
       <section className="OurClients-section" id="clients">
-        <div className="container">
+        <div data-aos="zoom-in-right" className="container">
         <h2 className="OurClients-section-title">НАШИ КЛИЕНТЫ</h2>
           <ul className="OurClients-section-list">
             <li className="OurClients-section-list">

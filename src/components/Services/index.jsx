@@ -5,7 +5,7 @@ const Services = () => {
     <>
       <section className="services-section" id="services">
         <div className="container">
-          <div className="services-section-box">
+          <div data-aos="fade-down" className="services-section-box">
             <h2 className="services-section-title">УСЛУГИ</h2>
             <p className="services-section-subtitle">
               Новые горизонты вашего бизнеса
@@ -13,7 +13,7 @@ const Services = () => {
           </div>
           <ul className="services-section-list">
 
-            <li className="services-section-item">
+            <li data-aos="fade-right" className="services-section-item">
               <svg
                 preserveAspectRatio="xMidYMid meet"
                 data-bbox="26.5 23.75 147 152.5"
@@ -63,7 +63,7 @@ const Services = () => {
             </li>
 
 
-            <li className="services-section-item">
+            <li data-aos="fade-up" className="services-section-item">
               <svg
                 preserveAspectRatio="xMidYMid meet"
                 data-bbox="20 34.606 159.999 126.634"
@@ -113,7 +113,7 @@ const Services = () => {
             </li>
 
 
-            <li className="services-section-item">
+            <li data-aos="fade-left" className="services-section-item">
               <svg
                 preserveAspectRatio="xMidYMid meet"
                 data-bbox="26.982 26 146.037 148"

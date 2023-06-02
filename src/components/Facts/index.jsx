@@ -11,7 +11,7 @@ const Facts = () => {
   return (
     <>
       <section className="Facts-section">
-        <div className="container">
+        <div data-aos="zoom-in" className="container">
           <h2 className="Facts-section-title">Наша компания: цифры и факты</h2>
           <ul className="Facts-section-list">
             <li className="Facts-section-item">
