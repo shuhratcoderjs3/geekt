@@ -1,8 +1,9 @@
 .site-header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   padding: 20px 0 20px 0;
-  background-color: #fff;
+  background-color: #003f34;
   z-index: 9999;
 }
 
@@ -26,6 +27,17 @@
   color: #16163f;
 }
 
+.site-header-link{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-header-logo-title{
+  color: #fff;
+  margin: 0;
+}
+
 .site-nav-list {
   display: flex;
   align-items: center;
@@ -45,9 +57,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 49px;
-  color: #16163f;
+  color: #fff;
   transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
 
 .site-nav-link:hover{
   color: #FFCA2F;

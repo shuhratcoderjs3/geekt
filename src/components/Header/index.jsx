@@ -36,8 +36,8 @@ const Header = () => {
     }
   };
 
-  const [activeItem, setActiveItem] = useState("Главная"); // Ba'zi boshlang'ich holatni belgilash
-
+  const [activeItem, setActiveItem] = useState("Главная"); 
+  
   const handleClick = (item) => {
     setActiveItem(item);
   };
@@ -56,6 +56,7 @@ const Header = () => {
                 width={100}
                 height={70}
               />
+              <h2 className="site-header-logo-title">Consulting</h2>
             </a>
             <nav className="site-nav">
               <ul className="site-nav-list">

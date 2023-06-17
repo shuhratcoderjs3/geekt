@@ -1,5 +1,5 @@
 import React from "react";
-import './services.css'
+import "./services.css";
 const Services = () => {
   return (
     <>
@@ -12,7 +12,6 @@ const Services = () => {
             </p>
           </div>
           <ul className="services-section-list">
-
             <li data-aos="fade-right" className="services-section-item">
               <svg
                 preserveAspectRatio="xMidYMid meet"
@@ -54,14 +53,12 @@ const Services = () => {
                   ></path>
                 </g>
               </svg>
-              <h3 className="services-section-item-title">
-                Разработка бизнес-планов
-              </h3>
+              <h3 className="services-section-item-title">Audit</h3>
               <p className="services-section-item-subtitle">
-                Это текст. Нажмите здесь, чтобы изменить его.
+                biznesingiz shu paytgacha qanaqa ishlagan, unda nimalari bor va
+                tikilgan pul o`zini oqlaganmi?
               </p>
             </li>
-
 
             <li data-aos="fade-up" className="services-section-item">
               <svg
@@ -104,14 +101,12 @@ const Services = () => {
                   ></path>
                 </g>
               </svg>
-              <h3 className="services-section-item-title">
-                Разработка бизнес-планов
-              </h3>
+              <h3 className="services-section-item-title">Outsoursing</h3>
               <p className="services-section-item-subtitle">
-                Это текст. Нажмите здесь, чтобы изменить его.
+                online tarzda biznesingiz holatini ko`rish va pullaringizni
+                boshqarish
               </p>
             </li>
-
 
             <li data-aos="fade-left" className="services-section-item">
               <svg
@@ -161,15 +156,11 @@ const Services = () => {
                   ></path>
                 </g>
               </svg>
-              <h3 className="services-section-item-title">
-                Разработка бизнес-планов
-              </h3>
+              <h3 className="services-section-item-title">Moliyaviy model</h3>
               <p className="services-section-item-subtitle">
-                Это текст. Нажмите здесь, чтобы изменить его.
+                biznesni umumiy tizimlashtirish
               </p>
             </li>
-
-
           </ul>
         </div>
       </section>

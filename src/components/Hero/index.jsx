@@ -6,9 +6,9 @@ const Hero = () => {
       <section className='hero-section'>
         <div className="container">
           <div data-aos="fade-up" className='hero-section-box'>
-            <h1 className='hero-section-title'>Решения для бизнеса</h1>
+            <h1 className='hero-section-title'>Biznesingizni raqamlarda ko`ring!</h1>
             <p className='hero-section-subtitle'>
-            Это текст. Нажмите здесь, чтобы изменить его.​
+            Ortiqcha xarajatlarni optimallashtiramiz va foydangizni oshiramiz!​
             </p>
             <button className="site-header-btn">Позвонить</button>
           </div>
