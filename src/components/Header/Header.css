@@ -61,7 +61,6 @@
   transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-
 .site-nav-link:hover{
   color: #FFCA2F;
   transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -75,7 +74,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 31px;
-  color: #ffffff;
+  color: #003f34;
   cursor: pointer;
 }
 
@@ -131,6 +130,16 @@
   margin-bottom: 50px;
 }
 
+.site-nav-link-burger{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 49px;
+  color: #000;
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+
 @media only screen and (max-width: 860px) {
   .site-nav{
     display: none;
@@ -153,5 +162,18 @@
     font-size: 16px;
     line-height: 31px;
     color: #ffffff;
+  }
+}
+
+
+@media only screen and (max-width: 440px) {
+  .site-header-link{
+    gap: 5px;
+  }
+  .site-header-logo-title{
+    font-size: 20px;
+  }
+  .btn-box{
+    gap: 5px;
   }
 }

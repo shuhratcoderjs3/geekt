@@ -11,6 +11,7 @@ import Services from "./components/Services";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Modal from "./components/Modal";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -20,6 +21,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <Modal/>
       <Services />
       <Facts />
       <AboutUs />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../../assets/icons/header-logo.svg"
+import Logo from "../../assets/icons/header-logo.svg";
+import Modal from "../Modal";
 import "./Header.css";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,13 +37,22 @@ const Header = () => {
     }
   };
 
-  const [activeItem, setActiveItem] = useState("Главная"); 
-  
+  const [activeItem, setActiveItem] = useState("Главная");
+
   const handleClick = (item) => {
     setActiveItem(item);
   };
 
- 
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const openModal = () => {
+    setIsOpenModal(true);
+  };
+
+  const closeModal = () => {
+    setIsOpenModal(false);
+  };
+
   return (
     <>
       <header className={`site-header  ${isScrolled ? "header-scroll" : ""}`}>
@@ -81,7 +91,7 @@ const Header = () => {
                   }`}
                 >
                   <a
-                     className={`site-nav-link ${
+                    className={`site-nav-link ${
                       activeItem === "Услуги" ? "actives" : ""
                     }`}
                     href="#services"
@@ -126,9 +136,9 @@ const Header = () => {
                   }`}
                 >
                   <a
-                   className={`site-nav-link ${
-                    activeItem === "Клиенты" ? "actives" : ""
-                  }`}
+                    className={`site-nav-link ${
+                      activeItem === "Клиенты" ? "actives" : ""
+                    }`}
                     href="#clients"
                     onClick={() => handleClick("Клиенты")}
                   >
@@ -141,9 +151,9 @@ const Header = () => {
                   }`}
                 >
                   <a
-                   className={`site-nav-link ${
-                    activeItem === "Контакты" ? "actives" : ""
-                  }`}
+                    className={`site-nav-link ${
+                      activeItem === "Контакты" ? "actives" : ""
+                    }`}
                     href="#contact"
                     onClick={() => handleClick("Контакты")}
                   >
@@ -154,7 +164,12 @@ const Header = () => {
             </nav>
 
             <div className="btn-box">
-              <button className="site-header-btn">Позвонить</button>
+              <div>
+                <button onClick={openModal} className="site-header-btn">
+                  Позвонить
+                </button>
+                <Modal isOpenModal={isOpenModal} closeModal={closeModal} />
+              </div>
               <button className="burger-btn" onClick={handleOpenMenu}>
                 <svg
                   width="22"
@@ -165,7 +180,7 @@ const Header = () => {
                 >
                   <path
                     d="M1.125 13.375H16.875M1.125 7.375H16.875M1.125 1.375H16.875"
-                    stroke="black"
+                    stroke="#fff"
                     stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -214,32 +229,32 @@ const Header = () => {
           <nav className="site-nav-burger">
             <ul className="site-nav-list-burger">
               <li className="site-nav-item-burger">
-                <a className="site-nav-link" href="#">
+                <a className="site-nav-link-burger" href="#">
                   Главная
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link" href="#services">
+                <a className="site-nav-link-burger" href="#services">
                   Услуги
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link" href="#">
+                <a className="site-nav-link-burger" href="#">
                   О нас
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link" href="#">
+                <a className="site-nav-link-burger" href="#">
                   Отзывы
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link" href="#">
+                <a className="site-nav-link-burger" href="#">
                   Клиенты
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link" href="#">
+                <a className="site-nav-link-burger" href="#">
                   Контакты
                 </a>
               </li>

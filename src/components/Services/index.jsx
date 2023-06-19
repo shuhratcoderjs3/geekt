@@ -55,7 +55,7 @@ const Services = () => {
               </svg>
               <h3 className="services-section-item-title">Audit</h3>
               <p className="services-section-item-subtitle">
-                biznesingiz shu paytgacha qanaqa ishlagan, unda nimalari bor va
+                Biznesingiz shu paytgacha qanaqa ishlagan, unda nimalari bor va
                 tikilgan pul o`zini oqlaganmi?
               </p>
             </li>
@@ -103,7 +103,7 @@ const Services = () => {
               </svg>
               <h3 className="services-section-item-title">Outsoursing</h3>
               <p className="services-section-item-subtitle">
-                online tarzda biznesingiz holatini ko`rish va pullaringizni
+                Online tarzda biznesingiz holatini ko`rish va pullaringizni
                 boshqarish
               </p>
             </li>
@@ -158,7 +158,7 @@ const Services = () => {
               </svg>
               <h3 className="services-section-item-title">Moliyaviy model</h3>
               <p className="services-section-item-subtitle">
-                biznesni umumiy tizimlashtirish
+                Biznesni umumiy tizimlashtirish
               </p>
             </li>
           </ul>

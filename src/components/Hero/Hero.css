@@ -32,7 +32,7 @@
 
 @media only screen and (max-width: 800px) {
   .hero-section{
-    padding-top: 50px;
+    padding-top: 140px;
   }
 
   .hero-section-title {
@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 600px) {
   .hero-section{
-    padding-top: 40px;
+    padding-top: 130px;
     background-size: 600px;
   }
 
@@ -80,7 +80,7 @@
 
 @media only screen and (max-width: 450px) {
   .hero-section{
-    padding-top: 30px;
+    padding-top: 130px;
     background-size: 400px;
     background-position: calc(50% + 00px) calc(50% - 100px);
   }
@@ -112,7 +112,7 @@
 
 @media only screen and (max-width: 375px) {
   .hero-section{
-    padding-top: 25px;
+    padding-top: 125px;
     background-position: calc(50% + 00px) calc(50% - 150px);
   }
 
