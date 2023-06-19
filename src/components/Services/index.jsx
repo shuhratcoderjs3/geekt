@@ -12,7 +12,7 @@ const Services = () => {
             </p>
           </div>
           <ul className="services-section-list">
-            <li data-aos="fade-right" className="services-section-item">
+            <li data-aos="fade-up" className="services-section-item">
               <svg
                 preserveAspectRatio="xMidYMid meet"
                 data-bbox="26.5 23.75 147 152.5"
@@ -108,7 +108,7 @@ const Services = () => {
               </p>
             </li>
 
-            <li data-aos="fade-left" className="services-section-item">
+            <li data-aos="fade-up" className="services-section-item">
               <svg
                 preserveAspectRatio="xMidYMid meet"
                 data-bbox="26.982 26 146.037 148"
