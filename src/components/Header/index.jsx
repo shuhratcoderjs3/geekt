@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../assets/icons/header-logo.svg";
 import Modal from "../Modal";
 import "./Header.css";
+import { languages } from "../../localization/languages";
+import { useLocalization } from "../../hooks/useLocalization";
 const Header = () => {
+  const [lang, setLang] = useLocalization();
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -82,7 +86,7 @@ const Header = () => {
                     href="#"
                     onClick={() => handleClick("Главная")}
                   >
-                    Главная
+                    {languages[lang].header.nav.navItem1}
                   </a>
                 </li>
                 <li
@@ -97,7 +101,7 @@ const Header = () => {
                     href="#services"
                     onClick={() => handleClick("Услуги")}
                   >
-                    Услуги
+                    {languages[lang].header.nav.navItem2}
                   </a>
                 </li>
                 <li
@@ -112,7 +116,7 @@ const Header = () => {
                     href="#aboutus"
                     onClick={() => handleClick("О нас")}
                   >
-                    О нас
+                    {languages[lang].header.nav.navItem3}
                   </a>
                 </li>
                 <li
@@ -127,7 +131,7 @@ const Header = () => {
                     href="#reviews"
                     onClick={() => handleClick("Отзывы")}
                   >
-                    Отзывы
+                    {languages[lang].header.nav.navItem4}
                   </a>
                 </li>
                 <li
@@ -142,7 +146,7 @@ const Header = () => {
                     href="#clients"
                     onClick={() => handleClick("Клиенты")}
                   >
-                    Клиенты
+                    {languages[lang].header.nav.navItem5}
                   </a>
                 </li>
                 <li
@@ -157,16 +161,25 @@ const Header = () => {
                     href="#contact"
                     onClick={() => handleClick("Контакты")}
                   >
-                    Контакты
+                    {languages[lang].header.nav.navItem6}
                   </a>
                 </li>
               </ul>
             </nav>
 
             <div className="btn-box">
+              <select
+                className="header-select"
+                name="language"
+                value={lang}
+                onChange={(evt) => setLang(evt.target.value)}
+              >
+                <option value="uz">Uz</option>
+                <option value="ru">Ru</option>
+              </select>
               <div>
                 <button onClick={openModal} className="site-header-btn">
-                  Позвонить
+                  {languages[lang].hero.hero_btn}
                 </button>
                 <Modal isOpenModal={isOpenModal} closeModal={closeModal} />
               </div>

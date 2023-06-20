@@ -1,25 +1,26 @@
 .hero-section {
   padding-top: 150px;
-  background-image: url(../../assets/images/background-header.jpg);
+  padding-bottom: 120px;
+  background-image: url(../../assets/images/diagramm.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
 }
 
 .hero-section-title {
   margin-top: 0;
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
   font-family: "Roboto";
-  font-size: 90px;
+  font-size: 85px;
   line-height: 1.1em;
   letter-spacing: -0.02em;
   font-style: normal;
   font-weight: 700;
   margin-bottom: 50px;
+  color: #fff;
 }
 
 .hero-section-subtitle {
@@ -27,6 +28,7 @@
   width: 100%;
   max-width: 500px;
   margin-top: 0;
+  color: #fff;
 }
 
 
@@ -63,12 +65,12 @@
     margin-top: 0;
     width: 100%;
     max-width: 450px;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 1.1em;
     margin-bottom: 20px;
   }
   .hero-section-subtitle {
-    font-size: 24px;
+    font-size: 20px;
     width: 100%;
     max-width: 330px;
     margin-top: 0;
@@ -92,18 +94,18 @@
     margin-top: 0;
     width: 100%;
     max-width: 400px;
-    font-size: 60px;
+    font-size: 50px;
     line-height: 1.1em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .hero-section-subtitle {
-    font-size: 22px;
+    font-size: 18px;
     width: 100%;
-    max-width: 330px;
+    max-width: 400px;
     margin-top: 0;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 
@@ -116,25 +118,5 @@
     background-position: calc(50% + 00px) calc(50% - 150px);
   }
 
- 
-
-  .hero-section-title {
-    text-align: center;
-    margin-top: 0;
-    width: 100%;
-    max-width: 100%;
-    font-size: 40px;
-    line-height: 1.1em;
-    margin-bottom: 20px;
-  }
-  .hero-section-subtitle {
-    font-size: 22px;
-    width: 100%;
-    max-width: 100%;
-    margin-top: 0;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
 }
 

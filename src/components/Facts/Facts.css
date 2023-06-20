@@ -1,6 +1,6 @@
 .Facts-section{
   padding: 70px 0 70px 0px;
-  background-color: #ffca2f;
+  background-color: #003f34;
 }
 
 .Facts-section-title{
@@ -11,6 +11,7 @@
   font-size: 36px;
   font-family: "Open Sans", sans-serif;
   align-items: center;
+  color: #fff;
 }
 
 .Facts-section-list{
@@ -34,6 +35,7 @@
   font-size: 80px;
   margin-top: 0;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 
@@ -43,6 +45,7 @@
   line-height: normal;
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
+  color: #fff;
 }
 
 @media only screen and (max-width: 760px) {

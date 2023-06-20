@@ -31,10 +31,6 @@
   text-align: center;
 }
 
-.modal p {
-  margin-bottom: 20px;
-}
-
 
 .close-modal-btn{
   position: absolute;
@@ -86,4 +82,52 @@
   width: 100%;
   cursor: pointer;
   color:#fff;
+}
+
+@media only screen and (max-width: 560px) {
+  .modal {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .modal {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .modal-input{
+    margin-bottom: 21px;
+    padding: 10px 0px 5px 0px;
+    font-size: 21px;
+  }
+  
+  .modal-input::placeholder{
+    color: #A2A5AB;
+    font-size: 17px;
+  }
+
+  .modal h2 {
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .modal-form-btn{
+    background-color: #486ACB;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+    color:#fff;
+  }
+
+  .close-modal-btn{
+   
+    padding: 5px 6px 3px 6px;
+   
+  }
 }
