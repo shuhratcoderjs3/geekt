@@ -165,6 +165,9 @@
     align-items: center;
     gap: 0px;
   }
+  .site-header-btn{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 530px) {
@@ -180,9 +183,15 @@
   }
 }
 
+@media only screen and (max-width: 580px) {
+  .site-header-logo-title{
+    font-size: 18px;
+  }
+}
+
 @media only screen and (max-width: 530px) {
   .site-header-logo-title{
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 

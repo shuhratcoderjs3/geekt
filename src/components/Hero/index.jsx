@@ -12,7 +12,7 @@ const Hero = () => {
             <h1 className='hero-section-title'>{ languages[lang].hero.hero_title}</h1>
             <p className='hero-section-subtitle'>{ languages[lang].hero.hero_subtitle}
             </p>
-            <button className="site-header-btn">{ languages[lang].hero.hero_btn}</button>
+            <button className="site-hero-btn">{ languages[lang].hero.hero_btn}</button>
           </div>
         </div>
      </section>

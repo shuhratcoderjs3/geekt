@@ -31,6 +31,18 @@
   color: #fff;
 }
 
+.site-hero-btn {
+  padding: 9px 22px;
+  background-color: #FFCA2F;
+  border-radius: 100px;
+  border: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+  color: #003f34;
+  cursor: pointer;
+}
+
 
 @media only screen and (max-width: 800px) {
   .hero-section{
@@ -50,7 +62,6 @@
 @media only screen and (max-width: 600px) {
   .hero-section{
     padding-top: 130px;
-    background-size: 600px;
   }
 
   .hero-section-box{
@@ -83,8 +94,6 @@
 @media only screen and (max-width: 450px) {
   .hero-section{
     padding-top: 130px;
-    background-size: 400px;
-    background-position: calc(50% + 00px) calc(50% - 100px);
   }
 
  
@@ -115,8 +124,16 @@
 @media only screen and (max-width: 375px) {
   .hero-section{
     padding-top: 125px;
-    background-position: calc(50% + 00px) calc(50% - 150px);
   }
-
+  .hero-section-title {
+    max-width: 600px;
+    font-size: 40px;
+    line-height: 1.1em;
+    letter-spacing: -0.02em;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #fff;
+  }
 }
 
