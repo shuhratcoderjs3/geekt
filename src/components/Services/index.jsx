@@ -1,14 +1,19 @@
 import React from "react";
 import "./services.css";
+import { useLocalization } from "../../hooks/useLocalization";
+import { languages } from "../../localization/languages";
 const Services = () => {
+  const [lang] = useLocalization();
   return (
     <>
       <section className="services-section" id="services">
         <div className="container">
           <div data-aos="fade-down" className="services-section-box">
-            <h2 className="services-section-title">УСЛУГИ</h2>
+            <h2 className="services-section-title">
+              {languages[lang].hizmatlar.services_title}
+            </h2>
             <p className="services-section-subtitle">
-              Новые горизонты вашего бизнеса
+              {languages[lang].hizmatlar.services_subtitle}
             </p>
           </div>
           <ul className="services-section-list">
@@ -53,10 +58,9 @@ const Services = () => {
                   ></path>
                 </g>
               </svg>
-              <h3 className="services-section-item-title">Audit</h3>
+              <h3 className="services-section-item-title">{languages[lang].hizmatlar.services_item_title1}</h3>
               <p className="services-section-item-subtitle">
-                Biznesingiz shu paytgacha qanaqa ishlagan, unda nimalari bor va
-                tikilgan pul o`zini oqlaganmi?
+              {languages[lang].hizmatlar.services_item_subtitle1}
               </p>
             </li>
 
@@ -101,10 +105,9 @@ const Services = () => {
                   ></path>
                 </g>
               </svg>
-              <h3 className="services-section-item-title">Outsoursing</h3>
+              <h3 className="services-section-item-title">{languages[lang].hizmatlar.services_item_title2}</h3>
               <p className="services-section-item-subtitle">
-                Online tarzda biznesingiz holatini ko`rish va pullaringizni
-                boshqarish
+              {languages[lang].hizmatlar.services_item_subtitle2}
               </p>
             </li>
 
@@ -156,9 +159,9 @@ const Services = () => {
                   ></path>
                 </g>
               </svg>
-              <h3 className="services-section-item-title">Moliyaviy model</h3>
+              <h3 className="services-section-item-title">{languages[lang].hizmatlar.services_item_title3}</h3>
               <p className="services-section-item-subtitle">
-                Biznesni umumiy tizimlashtirish
+              {languages[lang].hizmatlar.services_item_subtitle3}
               </p>
             </li>
           </ul>

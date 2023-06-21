@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-box">
-        <h3 className="footer-title">© 2023 ООО «Astrolab production». Сайт создан на <a className="footer-link" href="#">Astrolab.uz</a></h3>
+        <h3 className="footer-title">© 2023 ООО «Astrolab». Сайт создан на <a className="footer-link" href="#">Astrolab.uz</a></h3>
         </div>
         
      </footer>
