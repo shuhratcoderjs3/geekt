@@ -5,7 +5,7 @@
   flex-direction: column;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #ffca2f;
+  background-color: #003f34;
 }
 .Revievs-wrapper {
   width: 500px;
@@ -28,6 +28,7 @@
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 40px;
+  color: #fff;
 }
 
 .Reviews-title {
@@ -37,6 +38,7 @@
   margin-bottom: 0px;
   color: #000;
   text-align: center;
+  color: #fff;
 }
 
 .swipe-subtitle {
@@ -46,6 +48,7 @@
   margin-bottom: 10px;
   color: #000;
   text-align: center;
+  color: #fff;
 }
 
 .swipe-desc {
@@ -55,6 +58,7 @@
   margin-bottom: 10px;
   color: #000;
   margin: 0;
+  color: #fff;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,12 +1,12 @@
 .hero-section {
   padding-top: 150px;
-  padding-bottom: 120px;
   background-image: url(../../assets/images/diagramm.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
+  height: 105vh;
 }
 
 .hero-section-title {
@@ -19,7 +19,7 @@
   letter-spacing: -0.02em;
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: #fff;
 }
 

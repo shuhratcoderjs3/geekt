@@ -6,6 +6,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: color;
   width: 100%;
 }
 
@@ -22,6 +24,7 @@
   max-width: 400px;
   line-height: 1.5em;
   font-size: 18px;
+  color: #fff;
 }
 
 .AboutUs-section-title{
@@ -29,7 +32,7 @@
   font-size: 18px;
   margin-top: 0;
   margin-bottom: 20px;
-  color: #003f34;
+  color: #fff;
 }
 
 .AboutUs-section-subtitle{
@@ -38,5 +41,6 @@
   line-height: 1.2em;
   font-size: 40px;
   margin-top: 0;
+  color: #fff;
 }
 
