@@ -243,32 +243,32 @@ const Header = () => {
             <ul className="site-nav-list-burger">
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#">
-                  Главная
+                {languages[lang].header.nav.navItem1}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#services">
-                  Услуги
+                {languages[lang].header.nav.navItem2}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#">
-                  О нас
+                {languages[lang].header.nav.navItem3}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#">
-                  Отзывы
+                {languages[lang].header.nav.navItem4}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#">
-                  Клиенты
+                {languages[lang].header.nav.navItem5}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#">
-                  Контакты
+                {languages[lang].header.nav.navItem6}
                 </a>
               </li>
             </ul>

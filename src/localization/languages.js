@@ -36,19 +36,44 @@ export const languages = {
       fakts_item_title4: "hamkorlar",
     },
     modal: {
-      modal_title: "Biz bilan aloq",
+      modal_title: "Biz bilan aloqa",
       input_name: "ism",
       input_last: "Familiya",
       input_tel: "Tel nomer",
-      modal_btn: "Jo'natish",
+      modal_btn: "Yuborish",
     },
     About: {
       about_title: "Biz haqimizda ",
       about_subtitle: "Eng yaxshi mutaxassislar jamoasi",
-      about_desc1: "Bu matn. Siz uni sahifaning istalgan joyiga sudrab olishingiz mumkin. Bir marta bosing va 'Matnni tahrirlash' ni tanlang yoki matnni qo'shish va shriftni sozlash uchun ikki marta bosing. Sizning kompaniyangiz va xizmatlaringiz haqidagi matn bu erda yaxshi ko'rinadi.",
-      about_desc2: "Bu matn. Siz uni sahifaning istalgan joyiga sudrab olishingiz mumkin. Bir marta bosing va 'Matnni tahrirlash' ni tanlang yoki matnni qo'shish va shriftni sozlash uchun ikki marta bosing. Sizning kompaniyangiz va xizmatlaringiz haqidagi matn bu erda yaxshi ko'rinadi.",
+      about_desc1:
+        "Bu matn. Siz uni sahifaning istalgan joyiga sudrab olishingiz mumkin. Bir marta bosing va 'Matnni tahrirlash' ni tanlang yoki matnni qo'shish va shriftni sozlash uchun ikki marta bosing. Sizning kompaniyangiz va xizmatlaringiz haqidagi matn bu erda yaxshi ko'rinadi.",
+      about_desc2:
+        "Bu matn. Siz uni sahifaning istalgan joyiga sudrab olishingiz mumkin. Bir marta bosing va 'Matnni tahrirlash' ni tanlang yoki matnni qo'shish va shriftni sozlash uchun ikki marta bosing. Sizning kompaniyangiz va xizmatlaringiz haqidagi matn bu erda yaxshi ko'rinadi.",
+    },
+
+    Sharhlar: {
+      sharh_title: "SHARHLAR",
+      sharh_subtitle: "«Bu ko'rib chiqish. Tahrirlash uchun bosing.»",
+      sharh_name: "Lidiya Maksimovskaya",
+      sharh_desc: "Shirkat nomi"
+    },
+
+    Client: {
+      client_title: "BIZNING MIJOZLAR",
+    },
+
+    Contact: {
+      contact_title: "ALOQALAR",
+      contact_subtitle: "Biz sizni kutamiz",
+      contact_address: "st. Arbat, 1a, Moskva, 119019, Rossiya",
+      contact_email: "info@mysite.ru",
+      contact_tel: "t.+7 123 456-78-90",
     }
   },
+
+
+
+
 
   ru: {
     header: {
@@ -96,8 +121,27 @@ export const languages = {
     About: {
       about_title: "О НАС",
       about_subtitle: "Команда лучших экспертов",
-      about_desc1: "Это текст. Вы можете перетащить его в любое место на странице. Нажмите один раз и выберите «Редактировать текст» или просто нажмите дважды, чтобы добавить свой текст и настроить шрифт. Здесь будет удачно смотреться текст о вашей компании и услугах.",
-      about_desc2: "Это текст. Вы можете перетащить его в любое место на странице. Нажмите один раз и выберите «Редактировать текст» или просто нажмите дважды, чтобы добавить свой текст и настроить шрифт. Здесь будет удачно смотреться текст о вашей компании и услугах.",
+      about_desc1:
+        "Это текст. Вы можете перетащить его в любое место на странице. Нажмите один раз и выберите «Редактировать текст» или просто нажмите дважды, чтобы добавить свой текст и настроить шрифт. Здесь будет удачно смотреться текст о вашей компании и услугах.",
+      about_desc2:
+        "Это текст. Вы можете перетащить его в любое место на странице. Нажмите один раз и выберите «Редактировать текст» или просто нажмите дважды, чтобы добавить свой текст и настроить шрифт. Здесь будет удачно смотреться текст о вашей компании и услугах.",
+    },
+    Sharhlar: {
+      sharh_title: "ОТЗЫВЫ",
+      sharh_subtitle: "«Это отзыв. Нажмите, чтобы отредактировать».",
+      sharh_name: "Лидия Максимовская",
+      sharh_desc: " Наименование компании",
+    },
+     Client: {
+      client_title: "НАШИ КЛИЕНТЫ",
+    },
+
+    Contact: {
+      contact_title: "КОНТАКТЫ",
+      contact_subtitle: "Мы ждем вас",
+      contact_address: "ул. Арбат, 1а, Москва, 119019, Россия",
+      contact_email: "info@mysite.ru",
+      contact_tel: "т. +7 123 456-78-90",
     }
   },
 };

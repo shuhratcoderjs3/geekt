@@ -1,11 +1,14 @@
 import React from "react";
 import './OurClients.css'
+import { languages } from "../../localization/languages";
+import { useLocalization } from "../../hooks/useLocalization";
 const OurClients = () => {
+  const [lang, setLang] = useLocalization();
   return (
     <>
       <section className="OurClients-section" id="clients">
         <div data-aos="zoom-in-right" className="container">
-        <h2 className="OurClients-section-title">НАШИ КЛИЕНТЫ</h2>
+        <h2 className="OurClients-section-title">{languages[lang].Client.client_title}</h2>
           <ul className="OurClients-section-list">
             <li className="OurClients-section-list">
               <svg

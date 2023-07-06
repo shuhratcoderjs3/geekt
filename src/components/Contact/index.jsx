@@ -1,24 +1,26 @@
 import React from "react";
 import './Contact.css'
+import { languages } from "../../localization/languages";
+import { useLocalization } from "../../hooks/useLocalization";
 const Contact = () => {
-  
+  const [lang, setLang] = useLocalization();
   return (
     <>
       <section className="Contact-section" id="contact">
         <div className="container">
           <div data-aos="fade-up" className="contact-wrapper">
             <div className="contact-start">
-              <h2 className="contact-title">КОНТАКТЫ</h2>
-              <h3 className="contact-subtitle">Мы ждем вас</h3>
+              <h2 className="contact-title"> {languages[lang].Contact.contact_title}</h2>
+              <h3 className="contact-subtitle">{languages[lang].Contact.contact_subtitle}</h3>
               <address className="contact-address">
-                ул. Арбат, 1а, Москва, 119019, Россия
+              {languages[lang].Contact.contact_address}
               </address>
               <div className="contact-linkbox">
                 <a className="contact-mailto" href="mailto: info@mysite.ru">
-                  info@mysite.ru
+                {languages[lang].Contact.contact_email}
                 </a>
                 <a className="contact-mailto" href="tel: +71234567890">
-                  т. +7 123 456-78-90
+                {languages[lang].Contact.contact_email}
                 </a>
               </div>
               <ul className="contact-social-list">

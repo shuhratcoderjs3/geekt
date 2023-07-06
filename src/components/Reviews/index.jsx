@@ -8,14 +8,16 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
-
+import { languages } from "../../localization/languages";
+import { useLocalization } from "../../hooks/useLocalization";
 const Reviews = () => {
+  const [lang, setLang] = useLocalization();
   return (
     <>
       <section className="swiper-section" id="reviews">
         <div data-aos="flip-up" className="container">
           <h2 className="Reviews-title">
-          ОТЗЫВЫ
+          {languages[lang].Sharhlar.sharh_title}
           </h2>
           <div className="Revievs-wrapper">
             <Swiper
@@ -35,26 +37,26 @@ const Reviews = () => {
               <SwiperSlide>
                 <div className="card-lis">
                   <h3 className="swipe-title">
-                  «Это отзыв. Нажмите, чтобы отредактировать».
+                  {languages[lang].Sharhlar.sharh_subtitle}
                  </h3>
                  <h4 className="swipe-subtitle">
-                 Лидия Максимовская
+                 {languages[lang].Sharhlar.sharh_name}
                   </h4>
                   <p className="swipe-desc">
-                  Наименование компании
+                  {languages[lang].Sharhlar.sharh_desc}
                   </p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="card-lis">
                   <h3 className="swipe-title">
-                  «Это отзыв. Нажмите, чтобы отредактировать».
+                  {languages[lang].Sharhlar.sharh_subtitle}
                  </h3>
                  <h4 className="swipe-subtitle">
-                 Лидия Максимовская
+                 {languages[lang].Sharhlar.sharh_name}
                   </h4>
                   <p className="swipe-desc">
-                  Наименование компании
+                  {languages[lang].Sharhlar.sharh_desc}
                   </p>
                 </div>
               </SwiperSlide>
@@ -62,13 +64,13 @@ const Reviews = () => {
               <SwiperSlide>
                 <div className="card-lis">
                   <h3 className="swipe-title">
-                  «Это отзыв. Нажмите, чтобы отредактировать».
+                  {languages[lang].Sharhlar.sharh_subtitle}
                  </h3>
                  <h4 className="swipe-subtitle">
-                 Лидия Максимовская
+                 {languages[lang].Sharhlar.sharh_name}
                   </h4>
                   <p className="swipe-desc">
-                  Наименование компании
+                  {languages[lang].Sharhlar.sharh_desc}
                   </p>
                 </div>
               </SwiperSlide>
