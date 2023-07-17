@@ -18,7 +18,7 @@
 }
 
 .contact-title {
-  color: #003f34;
+  color: #FFCA2F;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -78,7 +78,7 @@
 
 .contact-input{
   border: none;
-  border-bottom: 1px solid #003f34;
+  border-bottom: 1px solid #FFCA2F;
   outline: none;
   padding-bottom: 10px;
   font-size: 16px;
@@ -123,7 +123,7 @@
 .email-input{
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #003f34;
+  border-bottom: 1px solid #FFCA2F;
   outline: none;
   padding-bottom: 10px;
   font-size: 16px;
@@ -140,7 +140,7 @@
 .textArea{
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #003f34;
+  border-bottom: 1px solid #FFCA2F;
   outline: none;
   font-size: 16px;
   margin-bottom: 20px;
@@ -188,7 +188,6 @@
     max-width: 350px;
   }
   .contact-title {
-    color: #ffca2f;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 16px;

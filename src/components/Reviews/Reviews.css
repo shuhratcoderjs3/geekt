@@ -38,7 +38,7 @@
   margin-bottom: 0px;
   color: #000;
   text-align: center;
-  color: #fff;
+  color: #FFCA2F;
 }
 
 .swipe-subtitle {
@@ -97,7 +97,6 @@
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 10px;
-    color: #000;
     text-align: center;
   }
   
@@ -106,7 +105,6 @@
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 10px;
-    color: #000;
     margin: 0;
   }
 }
