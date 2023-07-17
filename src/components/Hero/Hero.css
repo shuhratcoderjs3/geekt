@@ -1,5 +1,6 @@
 .hero-section {
-  padding-top: 150px;
+  padding-top: 230px;
+  padding-bottom: 100px;
   background-image: url(../../assets/images/diagramm.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -19,16 +20,17 @@
   letter-spacing: -0.02em;
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 40px;
-  color: #fff;
+  margin-bottom: 20px;
+  color: #00201a;
 }
 
 .hero-section-subtitle {
   font-size: 26px;
   width: 100%;
+  font-weight: 500;
   max-width: 500px;
   margin-top: 0;
-  color: #fff;
+  color: #00201a;
 }
 
 .site-hero-btn {

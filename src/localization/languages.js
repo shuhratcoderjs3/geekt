@@ -37,8 +37,7 @@ export const languages = {
     },
     modal: {
       modal_title: "Biz bilan aloqa",
-      input_name: "ism",
-      input_last: "Familiya",
+      input_name: "F.I.O",
       input_tel: "Tel nomer",
       modal_btn: "Yuborish",
     },
@@ -68,6 +67,10 @@ export const languages = {
       contact_address: "st. Arbat, 1a, Moskva, 119019, Rossiya",
       contact_email: "info@mysite.ru",
       contact_tel: "t.+7 123 456-78-90",
+      contact_form_name: "Ism",
+      contact_form_lastname: "Familiya",
+      contact_form_email: "Elektron pochta pochta",
+      contact_form_text: "Xabar matni..."
     }
   },
 
@@ -113,8 +116,7 @@ export const languages = {
     },
     modal: {
       modal_title: "Связаться с нами",
-      input_name: "имя",
-      input_last: "Фамилия",
+      input_name: "Ф.И.О.",
       input_tel: "Номер телефона",
       modal_btn: "отправлять",
     },
@@ -142,6 +144,10 @@ export const languages = {
       contact_address: "ул. Арбат, 1а, Москва, 119019, Россия",
       contact_email: "info@mysite.ru",
       contact_tel: "т. +7 123 456-78-90",
-    }
+      contact_form_name: "Имя",
+      contact_form_lastname: "Фамилия",
+      contact_form_email: "Эл. почта *",
+      contact_form_text: "Текст сообщения...",
+    },
   },
 };

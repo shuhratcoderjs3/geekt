@@ -23,7 +23,7 @@ const Header = () => {
     } else {
       setIsScrolled(false);
     }
-  };
+  }; 
 
   const [isOpen, setIsOpen] = useState(false);
 

@@ -107,11 +107,6 @@ const Modal = ({ isOpenModal, closeModal }) => {
               />
               <input
                 className="modal-input"
-                type="text"
-                placeholder={languages[lang].modal.input_last}
-              />
-              <input
-                className="modal-input"
                 type="tel"
                 placeholder={languages[lang].modal.input_tel}
                 onChange={handlePhoneNumberChange}

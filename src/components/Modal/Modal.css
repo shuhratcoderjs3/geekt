@@ -71,20 +71,31 @@
   font-size: 21px;
 }
 
+.modal-input:focus{
+  border: none;
+  border-bottom: 1px solid #003f34;
+  outline: none;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 10px 0px 5px 0px;
+  font-size: 21px;
+}
+
+
 .modal-input::placeholder{
   color: #A2A5AB;
   font-size: 20px;
 }
 
 .modal-form-btn{
-  background-color: #486ACB;
+  background-color: #FFCA2F;
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 23px;
   width: 100%;
   cursor: pointer;
-  color:#fff;
+  color:#003f34;
 }
 
 @media only screen and (max-width: 560px) {
@@ -98,6 +109,12 @@
   .modal {
     width: 100%;
     max-width: 300px;
+  }
+
+  .modal-input{
+    margin-bottom: 21px;
+    padding: 10px 0px 5px 0px;
+    font-size: 21px;
   }
 
   .modal-input{
