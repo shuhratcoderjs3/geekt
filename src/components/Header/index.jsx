@@ -252,22 +252,22 @@ const Header = () => {
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link-burger" href="#">
+                <a className="site-nav-link-burger" href="#aboutus">
                 {languages[lang].header.nav.navItem3}
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link-burger" href="#">
+                <a className="site-nav-link-burger" href="#reviews">
                 {languages[lang].header.nav.navItem4}
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link-burger" href="#">
+                <a className="site-nav-link-burger" href="#clients">
                 {languages[lang].header.nav.navItem5}
                 </a>
               </li>
               <li className="site-nav-item-burger">
-                <a className="site-nav-link-burger" href="#">
+                <a className="site-nav-link-burger" href="#contact">
                 {languages[lang].header.nav.navItem6}
                 </a>
               </li>
