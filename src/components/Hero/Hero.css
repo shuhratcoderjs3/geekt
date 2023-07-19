@@ -48,7 +48,7 @@
 
 @media only screen and (max-width: 800px) {
   .hero-section{
-    padding-top: 140px;
+    padding-top: 200px;
   }
 
   .hero-section-title {
@@ -63,7 +63,7 @@
 
 @media only screen and (max-width: 600px) {
   .hero-section{
-    padding-top: 130px;
+    padding-top: 190px;
   }
 
   .hero-section-box{
@@ -95,7 +95,7 @@
 
 @media only screen and (max-width: 450px) {
   .hero-section{
-    padding-top: 130px;
+    padding-top: 180px;
   }
 
  
@@ -125,7 +125,7 @@
 
 @media only screen and (max-width: 375px) {
   .hero-section{
-    padding-top: 125px;
+    padding-top: 180px;
   }
   .hero-section-title {
     max-width: 600px;
