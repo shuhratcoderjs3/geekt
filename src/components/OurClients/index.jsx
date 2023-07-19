@@ -40,225 +40,103 @@ const OurClients = () => {
           <h2 className="OurClients-section-title">
             {languages[lang].Client.client_title}
           </h2>
-        </div>
-        <Slider
-          width="250px"
-          duration={50}
-          pauseOnHover={true}
-          blurBorders={false}
-          blurBoderColor={"#fff"}
-        >
-          <Slider.Slide>
-            <img src={ProActive} alt="ProActive" width={150} height={50} />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img src={Do} alt="any3" className="w-36" width={100} height={30} />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={TechnoShop}
-              alt="any2"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Sultan}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img src={bp} alt="any3" className="w-36" width={100} height={20} />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Dono}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={yuksalish}
-              alt="any3"
-              width={100}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <div className="status_img">
+          <ul className="OurClient-list">
+            <li className="OurClient-item">
               <img
-                src={status}
-                alt="any3"
-
-                width={100}
-                height={30}
+                className="OurClient-item-img"
+                src={ProActive}
+                alt="ProActive"
               />
-            </div>
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Asia}
-              alt="any3"
-              width={100}
-              height={30}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Metallobond}
-              alt="any3"
-              width={100}
-              height={30}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Fidan}
-              alt="any3"
-              width={100}
-              height={30}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={MediaTech}
-              alt="any3"
-              width={100}
-              height={30}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Avlod}
-              alt="any3"
-              width={100}
-              height={30}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Bella}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Medal}
-              alt="any3"
-              width={100}
-              height={30}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Discover}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={GrandTash}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Ilevel}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={UygaBozor}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Insaat}
-              alt="any3"
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Elegant}
-              alt="any3"
-              width={100}
-              height={30}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Reventt}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Kiyim}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Smartlife}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Ailem}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={Melita}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={luxia}
-              alt="any3"
-              width={150}
-              height={50}
-            />
-          </Slider.Slide>
-          <Slider.Slide>
-            <img
-              src={medicare}
-              alt="any3"
-              width={100}
-              height={30}
-            />
-          </Slider.Slide>
-        </Slider>
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Do} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={TechnoShop} alt="any2" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Sultan} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={bp} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Dono} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={yuksalish} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <div className="status_img">
+                <img className="OurClient-item-img" src={status} alt="any3" />
+              </div>
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Asia} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img
+                className="OurClient-item-img"
+                src={Metallobond}
+                alt="any3"
+              />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Fidan} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={MediaTech} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Avlod} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img-cov" src={Bella} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Medal} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Discover} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img-cov" src={GrandTash} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Ilevel} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img-cov" src={UygaBozor} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img-cov" src={Insaat} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Elegant} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Reventt} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img-cov" src={Kiyim} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img-cov" src={Smartlife} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img-cov" src={Ailem} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={Melita} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img-cov" src={luxia} alt="any3" />
+            </li>
+            <li className="OurClient-item">
+              <img className="OurClient-item-img" src={medicare} alt="any3" />
+            </li>
+          </ul>
+        </div>
       </section>
     </>
   );

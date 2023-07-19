@@ -1,6 +1,6 @@
 .OurClients-section{
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .OurClients-section-title{
@@ -14,13 +14,26 @@
   margin-bottom: 50px;
 }
 
-.OurClients-section-list{
+
+.OurClient-list{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 50px;
   flex-wrap: wrap;
 }
+
+
+  .OurClient-item-img{
+    width: 200px;
+    height: 80px;
+    object-fit: contain;
+  }
+  .OurClient-item-img-cov{
+    width: 200px;
+    height: 80px;
+    object-fit: cover;
+  }
 
 .status_img{
   background-color: #cccccc;
