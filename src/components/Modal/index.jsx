@@ -11,7 +11,7 @@ const Modal = ({ isOpenModal, closeModal }) => {
     const bot = {
       TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
       chatID: "-1001855468600",
-      message: `First Name: ${firstName},
+      message: `Full Name: ${firstName},
 Phone Number: ${telNumber}`,
     };
 
@@ -130,7 +130,7 @@ Phone Number: ${telNumber}`,
               </svg>
             </button>
             <h2>{languages[lang].modal.modal_title}</h2>
-            <form className="modal-form">
+            <div className="modal-form">
               <input
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
@@ -148,7 +148,7 @@ Phone Number: ${telNumber}`,
               <button onClick={handleSendMessage} className="modal-form-btn">
                 {languages[lang].modal.modal_btn}
               </button>
-            </form>
+            </div>
           </div>
         </div>
       )}
