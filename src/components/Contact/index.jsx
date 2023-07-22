@@ -6,12 +6,15 @@ const Contact = () => {
   const [lang, setLang] = useLocalization();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const handleSendMessage = () => {
     const bot = {
       TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
       chatID: "-1001855468600",
       message: `First Name: ${firstName},
-Last Name: ${lastName}`,
+Last Name: ${lastName},
+Phone Number: ${phoneNumber}`,
+      
     };
 
     const apiUrl = `https://api.telegram.org/bot${bot.TOKEN}/sendMessage`;
@@ -32,6 +35,7 @@ Last Name: ${lastName}`,
         // Clear the input fields after successfully sending the message
         setFirstName("");
         setLastName("");
+        setPhoneNumber("");
       })
       .catch((error) => {
         console.error("Error sending message:", error);
@@ -116,9 +120,7 @@ Last Name: ${lastName}`,
                 </li>
               </ul>
             </div>
-            <div
-              className="contact-form"
-            >
+            <div className="contact-form">
               <div className="input-box-end">
                 <p className="placeholder-title">
                   {languages[lang].Contact.contact_form_name}
@@ -143,7 +145,21 @@ Last Name: ${lastName}`,
                   required
                 />
               </div>
-              <button onClick={handleSendMessage} className="contact-btn" type="submit">
+              <div className="input-box-end">
+                <p className="placeholder-title">Phone Number</p>
+                <input
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="email-input"
+                  type="tel"
+                  required
+                />
+              </div>
+              <button
+                onClick={handleSendMessage}
+                className="contact-btn"
+                type="submit"
+              >
                 {languages[lang].modal.modal_btn}
               </button>
             </div>

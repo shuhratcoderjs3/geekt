@@ -5,6 +5,39 @@ import { useLocalization } from "../../hooks/useLocalization";
 
 const Modal = ({ isOpenModal, closeModal }) => {
   const [lang, setLang] = useLocalization();
+  const [firstName, setFirstName] = useState("");
+  const [telNumber, setTelNumber] = useState("");
+  const handleSendMessage = () => {
+    const bot = {
+      TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
+      chatID: "-1001855468600",
+      message: `First Name: ${firstName},
+Phone Number: ${telNumber}`,
+    };
+
+    const apiUrl = `https://api.telegram.org/bot${bot.TOKEN}/sendMessage`;
+
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: bot.chatID,
+        text: bot.message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Message sent:", data);
+        // Clear the input fields after successfully sending the message
+        setFirstName("");
+        setTelNumber("");
+      })
+      .catch((error) => {
+        console.error("Error sending message:", error);
+      });
+  };
   const handleOverlayClick = () => {
     closeModal();
   };
@@ -24,7 +57,7 @@ const Modal = ({ isOpenModal, closeModal }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const handlePhoneNumberChange = (event) => {
     let input = event.target.value;
-  
+
     // Raqamni shaklga kiritish
     if (input.length === 0 && event.target === document.activeElement) {
       input = "+998 ";
@@ -35,10 +68,10 @@ const Modal = ({ isOpenModal, closeModal }) => {
     } else if (input.length > 0 && input[0] === "+") {
       input = "+" + input.slice(1, input.length);
     }
-  
+
     // Olib tashlash kerak bo'lmagan belgilarni chiqarish
     input = input.replace(/[^+\d]/g, "");
-  
+
     // Raqamni shaklga kiritish davomida chizg'ichlar qo'shish
     if (input.length > 4) {
       input = input.slice(0, 4) + " " + input.slice(4);
@@ -52,15 +85,13 @@ const Modal = ({ isOpenModal, closeModal }) => {
     if (input.length > 14) {
       input = input.slice(0, 14) + "-" + input.slice(14);
     }
-  
+
     // Restrict maximum length to 17 characters
     if (input.length <= 17) {
       setPhoneNumber(input);
     }
   };
-  
-  
-  
+
   return (
     <>
       {isOpenModal && (
@@ -101,18 +132,20 @@ const Modal = ({ isOpenModal, closeModal }) => {
             <h2>{languages[lang].modal.modal_title}</h2>
             <form className="modal-form">
               <input
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
                 className="modal-input"
                 type="text"
                 placeholder={languages[lang].modal.input_name}
               />
               <input
                 className="modal-input"
-                type="tel"
+                type="number"
                 placeholder={languages[lang].modal.input_tel}
-                onChange={handlePhoneNumberChange}
-                value={phoneNumber} 
+                onChange={(e) => setTelNumber(e.target.value)}
+                value={telNumber}
               />
-              <button className="modal-form-btn">
+              <button onClick={handleSendMessage} className="modal-form-btn">
                 {languages[lang].modal.modal_btn}
               </button>
             </form>
