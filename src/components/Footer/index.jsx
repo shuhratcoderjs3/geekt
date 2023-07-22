@@ -12,7 +12,7 @@ const Footer = () => {
           scrolling="no"
           marginheight="0"
           marginwidth="0"
-          src="https://maps.google.com/maps?q=california&t=&z=10&ie=UTF8&iwloc=&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5997.284471381936!2d69.226067!3d41.273125!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE2JzIzLjMiTiA2OcKwMTMnMzMuOCJF!5e0!3m2!1suz!2s!4v1689762229227!5m2!1suz!2s"
         >
         </iframe>
         </div>

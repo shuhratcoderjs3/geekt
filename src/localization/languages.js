@@ -3,7 +3,7 @@ export const languages = {
     header: {
       nav: {
         navItem1: "Bosh sahifa",
-        navItem2: "Hizmatlar",
+        navItem2: "Xizmatlar",
         navItem3: "Biz haqimizda",
         navItem4: "Sharhlar",
         navItem5: "Mijozlar",
@@ -18,7 +18,7 @@ export const languages = {
     },
     hizmatlar: {
       services_title: "Xizmatlar",
-      services_subtitle: "Sizning biznesingiz uchun yangi ufqlar",
+      services_subtitle: "Biz bilan biznesingizni yangi bosqichga olib chiqing!",
       services_item_title1: "Audit",
       services_item_title2: "Outsoursing",
       services_item_title3: "Moliyaviy model",
@@ -64,9 +64,8 @@ export const languages = {
     Contact: {
       contact_title: "ALOQALAR",
       contact_subtitle: "Biz sizni kutamiz",
-      contact_address: "st. Arbat, 1a, Moskva, 119019, Rossiya",
+      contact_address: "Cho’ponota ko’chasi 43",
       contact_email: "info@mysite.ru",
-      contact_tel: "t.+7 123 456-78-90",
       contact_form_name: "Ism",
       contact_form_lastname: "Familiya",
       contact_form_email: "Elektron pochta pochta",
@@ -97,7 +96,7 @@ export const languages = {
 
     hizmatlar: {
       services_title: "УСЛУГИ",
-      services_subtitle: "Новые горизонты вашего бизнеса",
+      services_subtitle: "Выведите свой бизнес на новый уровень вместе с нами!",
       services_item_title1: "Аудит",
       services_item_title2: "Аутсорсинг",
       services_item_title3: "Финансовая модель",
@@ -141,9 +140,9 @@ export const languages = {
     Contact: {
       contact_title: "КОНТАКТЫ",
       contact_subtitle: "Мы ждем вас",
-      contact_address: "ул. Арбат, 1а, Москва, 119019, Россия",
+      contact_address: "улица Чопонота 43",
       contact_email: "info@mysite.ru",
-      contact_tel: "т. +7 123 456-78-90",
+      contact_tel: "+998 77 009 08 94",
       contact_form_name: "Имя",
       contact_form_lastname: "Фамилия",
       contact_form_email: "Эл. почта *",

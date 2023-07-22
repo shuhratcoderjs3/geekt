@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import { languages } from "../../localization/languages";
 import { useLocalization } from "../../hooks/useLocalization";
 const Contact = () => {
   const [lang, setLang] = useLocalization();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const handleSendMessage = () => {
+    const bot = {
+      TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
+      chatID: "-1001855468600",
+      message: `First Name: ${firstName},
+Last Name: ${lastName}`,
+    };
+
+    const apiUrl = `https://api.telegram.org/bot${bot.TOKEN}/sendMessage`;
+
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: bot.chatID,
+        text: bot.message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Message sent:", data);
+        // Clear the input fields after successfully sending the message
+        setFirstName("");
+        setLastName("");
+      })
+      .catch((error) => {
+        console.error("Error sending message:", error);
+      });
+  };
+
   return (
     <>
       <section className="Contact-section" id="contact">
@@ -24,8 +58,11 @@ const Contact = () => {
                 <a className="contact-mailto" href="mailto: info@mysite.ru">
                   {languages[lang].Contact.contact_email}
                 </a>
-                <a className="contact-mailto" href="tel: +71234567890">
-                  {languages[lang].Contact.contact_tel}
+                <a className="contact-mailto" href="tel: +998770090894">
+                  +998 77 009 08 94
+                </a>
+                <a className="contact-mailto" href="tel: +998555000094">
+                  +998 55 500 00 94
                 </a>
               </div>
               <ul className="contact-social-list">
@@ -79,50 +116,37 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
-            <form
+            <div
               className="contact-form"
-              action="https://echo.htmlacademy.ru/"
-              method="post"
             >
-              <div className="form-box">
-                <div className="input-box">
-                  <p className="placeholder-title">{languages[lang].Contact.contact_form_name}</p>
-                  <input
-                    className="contact-input"
-                    type="text"
-                    name="firstName"
-                    required
-                  />
-                </div>
-                <div className="input-box">
-                  <p className="placeholder-title">{languages[lang].Contact.contact_form_lastname}</p>
-                  <input
-                    className="contact-input"
-                    type="text"
-                    name="lastName"
-                    required
-                  />
-                </div>
+              <div className="input-box-end">
+                <p className="placeholder-title">
+                  {languages[lang].Contact.contact_form_name}
+                </p>
+                <input
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  className="email-input"
+                  type="text"
+                  required
+                />
               </div>
-              <div className="form-box-end">
-                <div className="input-box-end">
-                  <p className="placeholder-title">{languages[lang].Contact.contact_form_email}</p>
-                  <input
-                    className="email-input"
-                    type="email"
-                    name="email"
-                    required
-                  />
-                </div>
-                <div className="input-box-end">
-                  <p className="placeholder-title">{languages[lang].Contact.contact_form_text}</p>
-                  <textarea className="textArea" name="comment"></textarea>
-                </div>
+              <div className="input-box-end">
+                <p className="placeholder-title">
+                  {languages[lang].Contact.contact_form_lastname}
+                </p>
+                <input
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  className="email-input"
+                  type="text"
+                  required
+                />
               </div>
-              <button className="contact-btn" type="submit">
-              {languages[lang].modal.modal_btn}
+              <button onClick={handleSendMessage} className="contact-btn" type="submit">
+                {languages[lang].modal.modal_btn}
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </section>

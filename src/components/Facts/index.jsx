@@ -19,25 +19,25 @@ const Facts = () => {
           <ul className="Facts-section-list">
             <li className="Facts-section-item">
               <h3 className="Facts-section-item-title">
-                <CountUp end={31} enableScrollSpy />
+                <CountUp end={1.5} enableScrollSpy />
               </h3>
               <p className="Facts-section-item-subtitle">{ languages[lang].fakts.fakts_item_title1}</p>
             </li>
             <li className="Facts-section-item">
               <h3 className="Facts-section-item-title">
-              <CountUp end={36} enableScrollSpy />
+              <CountUp end={6} enableScrollSpy />
               </h3>
               <p className="Facts-section-item-subtitle">{ languages[lang].fakts.fakts_item_title2}</p>
             </li>
             <li className="Facts-section-item">
               <h3 className="Facts-section-item-title">
-              <CountUp end={120} enableScrollSpy />
+              <CountUp end={36} enableScrollSpy />
               </h3>
               <p className="Facts-section-item-subtitle">{ languages[lang].fakts.fakts_item_title3}</p>
             </li>
             <li className="Facts-section-item">
               <h3 className="Facts-section-item-title">
-              <CountUp end={9} enableScrollSpy />
+              <CountUp end={1500} enableScrollSpy />
               </h3>
               <p className="Facts-section-item-subtitle">{ languages[lang].fakts.fakts_item_title4}</p>
             </li>
