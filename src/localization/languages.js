@@ -69,7 +69,8 @@ export const languages = {
       contact_form_name: "Ism",
       contact_form_lastname: "Familiya",
       contact_form_email: "Elektron pochta pochta",
-      contact_form_text: "Xabar matni..."
+      contact_form_text: "Xabar matni...",
+      contact_form_tel: "Telefon raqam"
     }
   },
 
@@ -147,6 +148,7 @@ export const languages = {
       contact_form_lastname: "Фамилия",
       contact_form_email: "Эл. почта *",
       contact_form_text: "Текст сообщения...",
+      contact_form_tel: "Номер телефона"
     },
   },
 };

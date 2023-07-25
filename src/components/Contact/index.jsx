@@ -164,7 +164,7 @@ Phone Number: ${phoneNumber.replace(/[\(\)]/g, "")}`,
                 />
               </div>
               <div className="input-box-end">
-                <p className="placeholder-title">Phone Number</p>
+                <p className="placeholder-title">    {languages[lang].Contact.contact_form_tel}</p>
                 <InputMask
                   mask="+\9\9\8\ (99) 999-99-99"
                   maskChar=" "
