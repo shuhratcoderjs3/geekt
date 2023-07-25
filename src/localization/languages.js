@@ -30,10 +30,10 @@ export const languages = {
     },
     fakts: {
       fakts_title: "Bizning kompaniyamiz: raqamlar va faktlar",
-      fakts_item_title1: "yillik tajriba",
-      fakts_item_title2: "mutaxassislar",
-      fakts_item_title3: "har yili mijozlar",
-      fakts_item_title4: "hamkorlar",
+      fakts_item_title1: "Yillik tajriba",
+      fakts_item_title2: "Mutaxassislar",
+      fakts_item_title3: "Har yili mijozlar",
+      fakts_item_title4: "Hamkorlar",
     },
     modal: {
       modal_title: "Biz bilan aloqa",
@@ -108,16 +108,16 @@ export const languages = {
     },
     fakts: {
       fakts_title: "Наша компания: цифры и факты",
-      fakts_item_title1: "лет опыта",
-      fakts_item_title2: "экспертов",
-      fakts_item_title3: "клиентов ежегодно",
-      fakts_item_title4: "партнеров",
+      fakts_item_title1: "Лет опыта",
+      fakts_item_title2: "Экспертов",
+      fakts_item_title3: "Клиентов ежегодно",
+      fakts_item_title4: "Партнеров",
     },
     modal: {
       modal_title: "Связаться с нами",
       input_name: "Ф.И.О.",
       input_tel: "Номер телефона",
-      modal_btn: "отправлять",
+      modal_btn: "Отправить",
     },
     About: {
       about_title: "О НАС",

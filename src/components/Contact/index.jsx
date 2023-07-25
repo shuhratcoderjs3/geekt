@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Contact.css";
 import { languages } from "../../localization/languages";
 import { useLocalization } from "../../hooks/useLocalization";
+import InputMask from "react-input-mask";
 const Contact = () => {
   const [lang, setLang] = useLocalization();
   const [firstName, setFirstName] = useState("");
@@ -13,8 +14,7 @@ const Contact = () => {
       chatID: "-1001855468600",
       message: `First Name: ${firstName},
 Last Name: ${lastName},
-Phone Number: ${phoneNumber}`,
-      
+Phone Number: ${phoneNumber.replace(/[\(\)]/g, "")}`,
     };
 
     const apiUrl = `https://api.telegram.org/bot${bot.TOKEN}/sendMessage`;
@@ -41,6 +41,21 @@ Phone Number: ${phoneNumber}`,
         console.error("Error sending message:", error);
       });
   };
+  const handleLastNameKeyPress = (e) => {
+    const charCode = e.which || e.keyCode;
+    // Check if the entered character is a letter or a space
+    if (!(charCode >= 65 && charCode <= 90) && !(charCode >= 97 && charCode <= 122) && charCode !== 32) {
+      e.preventDefault(); // Prevent the input of non-letter characters
+    }
+  };
+
+  const handleFormValidation = () => {
+    if (!firstName.trim() || !lastName.trim() || !phoneNumber.trim()) {
+      alert("Please fill in all required fields.");
+      return false;
+    }
+  };
+  
 
   return (
     <>
@@ -128,9 +143,11 @@ Phone Number: ${phoneNumber}`,
                 <input
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
+                  // onChange={handleFirstNameChange}
                   className="email-input"
                   type="text"
                   required
+                  onKeyPress={handleLastNameKeyPress} // Add the onKeyPress event handler
                 />
               </div>
               <div className="input-box-end">
@@ -143,20 +160,26 @@ Phone Number: ${phoneNumber}`,
                   className="email-input"
                   type="text"
                   required
+                  onKeyPress={handleLastNameKeyPress} // Add the onKeyPress event handler
                 />
               </div>
               <div className="input-box-end">
                 <p className="placeholder-title">Phone Number</p>
-                <input
+                <InputMask
+                  mask="+\9\9\8\ (99) 999-99-99"
+                  maskChar=" "
+                  required={true}
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
                   className="email-input"
                   type="tel"
-                  required
                 />
               </div>
               <button
-                onClick={handleSendMessage}
+              onClick={() => {
+                handleFormValidation();
+                handleSendMessage();
+              }}
                 className="contact-btn"
                 type="submit"
               >

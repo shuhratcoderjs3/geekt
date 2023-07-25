@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Modal.css";
 import { languages } from "../../localization/languages";
 import { useLocalization } from "../../hooks/useLocalization";
-
+import InputMask from "react-input-mask";
 const Modal = ({ isOpenModal, closeModal }) => {
   const [lang, setLang] = useLocalization();
   const [firstName, setFirstName] = useState("");
@@ -92,6 +92,14 @@ Phone Number: ${telNumber}`,
     }
   };
 
+  const handleLastNameKeyPress = (e) => {
+    const charCode = e.which || e.keyCode;
+    // Check if the entered character is a letter or a space
+    if (!(charCode >= 65 && charCode <= 90) && !(charCode >= 97 && charCode <= 122) && charCode !== 32) {
+      e.preventDefault(); // Prevent the input of non-letter characters
+    }
+  };
+
   return (
     <>
       {isOpenModal && (
@@ -137,10 +145,14 @@ Phone Number: ${telNumber}`,
                 className="modal-input"
                 type="text"
                 placeholder={languages[lang].modal.input_name}
+                onKeyPress={handleLastNameKeyPress}
               />
-              <input
+              <InputMask
+               mask="+\9\9\8\ (99) 999-99-99"
+               maskChar=" "
+               required={true}
                 className="modal-input"
-                type="number"
+                type="tel"
                 placeholder={languages[lang].modal.input_tel}
                 onChange={(e) => setTelNumber(e.target.value)}
                 value={telNumber}
