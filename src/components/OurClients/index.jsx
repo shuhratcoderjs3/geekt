@@ -36,7 +36,7 @@ const OurClients = () => {
   return (
     <>
       <section className="OurClients-section" id="clients">
-        <div data-aos="zoom-in-right" className="container">
+        <div className="container">
           <h2 className="OurClients-section-title">
             {languages[lang].Client.client_title}
           </h2>
