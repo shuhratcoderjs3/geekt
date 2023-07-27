@@ -7,23 +7,6 @@ import { useLocalization } from "../../hooks/useLocalization";
 const Header = () => {
   const [lang, setLang] = useLocalization();
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    if (window.scrollY > 60) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  }; 
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -59,7 +42,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`site-header  ${isScrolled ? "header-scroll" : ""}`}>
+      <header className="site-header ">
         <div className="container">
           <div className="site-header-wrapper">
             <a className="site-header-link" href="/">
