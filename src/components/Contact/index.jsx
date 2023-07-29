@@ -3,12 +3,19 @@ import "./Contact.css";
 import { languages } from "../../localization/languages";
 import { useLocalization } from "../../hooks/useLocalization";
 import InputMask from "react-input-mask";
+
 const Contact = () => {
   const [lang, setLang] = useLocalization();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+
   const handleSendMessage = () => {
+    if (!firstName.trim() || !lastName.trim() || !phoneNumber.trim()) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
     const bot = {
       TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
       chatID: "-1001855468600",
@@ -41,21 +48,18 @@ Phone Number: ${phoneNumber.replace(/[\(\)]/g, "")}`,
         console.error("Error sending message:", error);
       });
   };
+
   const handleLastNameKeyPress = (e) => {
     const charCode = e.which || e.keyCode;
     // Check if the entered character is a letter or a space
-    if (!(charCode >= 65 && charCode <= 90) && !(charCode >= 97 && charCode <= 122) && charCode !== 32) {
+    if (
+      !(charCode >= 65 && charCode <= 90) &&
+      !(charCode >= 97 && charCode <= 122) &&
+      charCode !== 32
+    ) {
       e.preventDefault(); // Prevent the input of non-letter characters
     }
   };
-
-  const handleFormValidation = () => {
-    if (!firstName.trim() || !lastName.trim() || !phoneNumber.trim()) {
-      alert("Please fill in all required fields.");
-      return false;
-    }
-  };
-  
 
   return (
     <>
@@ -143,11 +147,9 @@ Phone Number: ${phoneNumber.replace(/[\(\)]/g, "")}`,
                 <input
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  // onChange={handleFirstNameChange}
                   className="email-input"
                   type="text"
                   required
-                  onKeyPress={handleLastNameKeyPress} // Add the onKeyPress event handler
                 />
               </div>
               <div className="input-box-end">
@@ -160,11 +162,13 @@ Phone Number: ${phoneNumber.replace(/[\(\)]/g, "")}`,
                   className="email-input"
                   type="text"
                   required
-                  onKeyPress={handleLastNameKeyPress} // Add the onKeyPress event handler
+                  onKeyPress={handleLastNameKeyPress}
                 />
               </div>
               <div className="input-box-end">
-                <p className="placeholder-title">    {languages[lang].Contact.contact_form_tel}</p>
+                <p className="placeholder-title">
+                  {languages[lang].Contact.contact_form_tel}
+                </p>
                 <InputMask
                   mask="+\9\9\8\ (99) 999-99-99"
                   maskChar=" "
@@ -176,10 +180,7 @@ Phone Number: ${phoneNumber.replace(/[\(\)]/g, "")}`,
                 />
               </div>
               <button
-              onClick={() => {
-                handleFormValidation();
-                handleSendMessage();
-              }}
+                onClick={handleSendMessage}
                 className="contact-btn"
                 type="submit"
               >

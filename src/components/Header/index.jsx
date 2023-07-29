@@ -42,7 +42,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="site-header ">
+      <header className="site-header">
         <div className="container">
           <div className="site-header-wrapper">
             <a className="site-header-link" href="/">

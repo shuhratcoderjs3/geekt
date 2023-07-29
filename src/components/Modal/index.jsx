@@ -54,48 +54,14 @@ Phone Number: ${telNumber}`,
     }
   }, [isOpenModal]);
 
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const handlePhoneNumberChange = (event) => {
-    let input = event.target.value;
-
-    // Raqamni shaklga kiritish
-    if (input.length === 0 && event.target === document.activeElement) {
-      input = "+998 ";
-      setPhoneNumber(input);
-      return;
-    } else if (input.length > 0 && input[0] !== "+") {
-      input = "+998 " + input;
-    } else if (input.length > 0 && input[0] === "+") {
-      input = "+" + input.slice(1, input.length);
-    }
-
-    // Olib tashlash kerak bo'lmagan belgilarni chiqarish
-    input = input.replace(/[^+\d]/g, "");
-
-    // Raqamni shaklga kiritish davomida chizg'ichlar qo'shish
-    if (input.length > 4) {
-      input = input.slice(0, 4) + " " + input.slice(4);
-    }
-    if (input.length > 7) {
-      input = input.slice(0, 7) + "-" + input.slice(7);
-    }
-    if (input.length > 11) {
-      input = input.slice(0, 11) + "-" + input.slice(11);
-    }
-    if (input.length > 14) {
-      input = input.slice(0, 14) + "-" + input.slice(14);
-    }
-
-    // Restrict maximum length to 17 characters
-    if (input.length <= 17) {
-      setPhoneNumber(input);
-    }
-  };
-
   const handleLastNameKeyPress = (e) => {
     const charCode = e.which || e.keyCode;
     // Check if the entered character is a letter or a space
-    if (!(charCode >= 65 && charCode <= 90) && !(charCode >= 97 && charCode <= 122) && charCode !== 32) {
+    if (
+      !(charCode >= 65 && charCode <= 90) &&
+      !(charCode >= 97 && charCode <= 122) &&
+      charCode !== 32
+    ) {
       e.preventDefault(); // Prevent the input of non-letter characters
     }
   };
@@ -148,9 +114,9 @@ Phone Number: ${telNumber}`,
                 onKeyPress={handleLastNameKeyPress}
               />
               <InputMask
-               mask="+\9\9\8\ (99) 999-99-99"
-               maskChar=" "
-               required={true}
+                mask="+\9\9\8\ (99) 999-99-99"
+                maskChar=" "
+                required={true}
                 className="modal-input"
                 type="tel"
                 placeholder={languages[lang].modal.input_tel}
