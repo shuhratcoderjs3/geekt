@@ -7,7 +7,6 @@ import { useLocalization } from "../../hooks/useLocalization";
 const Header = () => {
   const [lang, setLang] = useLocalization();
 
-
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenMenu = () => {
@@ -40,6 +39,22 @@ const Header = () => {
     setIsOpenModal(false);
   };
 
+  const [scrollNumber, setScrollNumber] = useState();
+
+  window.onscroll = function () {
+    myFunction();
+  };
+  function myFunction() {
+    const scroll = document.documentElement.scrollTop;
+    setScrollNumber(scroll);
+  }
+  useEffect(() => {
+    myFunction();
+  }, [scrollNumber]);
+
+  console.log(scrollNumber, "scrollNumber");
+
+  
   return (
     <>
       <header className="site-header">
@@ -57,14 +72,10 @@ const Header = () => {
             </a>
             <nav className="site-nav">
               <ul className="site-nav-list">
-                <li
-                  className={`site-nav-item ${
-                    activeItem === "Главная" ? "actives" : ""
-                  }`}
-                >
+                <li className={`site-nav-item`}>
                   <a
                     className={`site-nav-link ${
-                      activeItem === "Главная" ? "actives" : ""
+                      scrollNumber >= 0 && scrollNumber < 413 ? "actives" : ""
                     }`}
                     href="#"
                     onClick={() => handleClick("Главная")}
@@ -72,75 +83,45 @@ const Header = () => {
                     {languages[lang].header.nav.navItem1}
                   </a>
                 </li>
-                <li
-                  className={`site-nav-item ${
-                    activeItem === "Услуги" ? "actives" : ""
-                  }`}
-                >
+                <li className={`site-nav-item `}>
                   <a
-                    className={`site-nav-link ${
-                      activeItem === "Услуги" ? "actives" : ""
-                    }`}
+                    className={`site-nav-link ${scrollNumber >= 413 && scrollNumber < 1563 ? "actives" : ""}`}
                     href="#services"
                     onClick={() => handleClick("Услуги")}
                   >
                     {languages[lang].header.nav.navItem2}
                   </a>
                 </li>
-                <li
-                  className={`site-nav-item ${
-                    activeItem === "О нас" ? "actives" : ""
-                  }`}
-                >
+                <li className={`site-nav-item `}>
                   <a
-                    className={`site-nav-link ${
-                      activeItem === "О нас" ? "actives" : ""
-                    }`}
+                    className={`site-nav-link ${scrollNumber >= 1563 && scrollNumber < 2199 ? "actives" : ""}`}
                     href="#aboutus"
                     onClick={() => handleClick("О нас")}
                   >
                     {languages[lang].header.nav.navItem3}
                   </a>
                 </li>
-                <li
-                  className={`site-nav-item ${
-                    activeItem === "Отзывы" ? "actives" : ""
-                  }`}
-                >
+                <li className={`site-nav-item `}>
                   <a
-                    className={`site-nav-link ${
-                      activeItem === "Отзывы" ? "actives" : ""
-                    }`}
+                    className={`site-nav-link ${scrollNumber >= 2199 && scrollNumber < 2619 ? "actives" : ""}`}
                     href="#reviews"
                     onClick={() => handleClick("Отзывы")}
                   >
                     {languages[lang].header.nav.navItem4}
                   </a>
                 </li>
-                <li
-                  className={`site-nav-item ${
-                    activeItem === "Клиенты" ? "actives" : ""
-                  }`}
-                >
+                <li className={`site-nav-item`}>
                   <a
-                    className={`site-nav-link ${
-                      activeItem === "Клиенты" ? "actives" : ""
-                    }`}
+                    className={`site-nav-link ${scrollNumber >= 2619 && scrollNumber < 3398 ? "actives" : ""}`}
                     href="#clients"
                     onClick={() => handleClick("Клиенты")}
                   >
                     {languages[lang].header.nav.navItem5}
                   </a>
                 </li>
-                <li
-                  className={`site-nav-item ${
-                    activeItem === "Контакты" ? "actives" : ""
-                  }`}
-                >
+                <li className={`site-nav-item`}>
                   <a
-                    className={`site-nav-link ${
-                      activeItem === "Контакты" ? "actives" : ""
-                    }`}
+                    className={`site-nav-link ${scrollNumber >= 3398 && scrollNumber < 10000 ? "actives" : ""}`}
                     href="#contact"
                     onClick={() => handleClick("Контакты")}
                   >
@@ -226,32 +207,32 @@ const Header = () => {
             <ul className="site-nav-list-burger">
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#">
-                {languages[lang].header.nav.navItem1}
+                  {languages[lang].header.nav.navItem1}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#services">
-                {languages[lang].header.nav.navItem2}
+                  {languages[lang].header.nav.navItem2}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#aboutus">
-                {languages[lang].header.nav.navItem3}
+                  {languages[lang].header.nav.navItem3}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#reviews">
-                {languages[lang].header.nav.navItem4}
+                  {languages[lang].header.nav.navItem4}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#clients">
-                {languages[lang].header.nav.navItem5}
+                  {languages[lang].header.nav.navItem5}
                 </a>
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#contact">
-                {languages[lang].header.nav.navItem6}
+                  {languages[lang].header.nav.navItem6}
                 </a>
               </li>
             </ul>
