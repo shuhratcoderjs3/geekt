@@ -4,8 +4,10 @@ import Modal from "../Modal";
 import "./Header.css";
 import { languages } from "../../localization/languages";
 import { useLocalization } from "../../hooks/useLocalization";
+import useScroll from "../../hooks/useScroll";
 const Header = () => {
   const [lang, setLang] = useLocalization();
+  const [scrollNumber] = useScroll()
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,22 +41,8 @@ const Header = () => {
     setIsOpenModal(false);
   };
 
-  const [scrollNumber, setScrollNumber] = useState();
 
-  window.onscroll = function () {
-    myFunction();
-  };
-  function myFunction() {
-    const scroll = document.documentElement.scrollTop;
-    setScrollNumber(scroll);
-  }
-  useEffect(() => {
-    myFunction();
-  }, [scrollNumber]);
 
-  console.log(scrollNumber, "scrollNumber");
-
-  
   return (
     <>
       <header className="site-header">
@@ -85,7 +73,11 @@ const Header = () => {
                 </li>
                 <li className={`site-nav-item `}>
                   <a
-                    className={`site-nav-link ${scrollNumber >= 413 && scrollNumber < 1563 ? "actives" : ""}`}
+                    className={`site-nav-link ${
+                      scrollNumber >= 413 && scrollNumber < 1563
+                        ? "actives"
+                        : ""
+                    }`}
                     href="#services"
                     onClick={() => handleClick("Услуги")}
                   >
@@ -94,7 +86,11 @@ const Header = () => {
                 </li>
                 <li className={`site-nav-item `}>
                   <a
-                    className={`site-nav-link ${scrollNumber >= 1563 && scrollNumber < 2199 ? "actives" : ""}`}
+                    className={`site-nav-link ${
+                      scrollNumber >= 1563 && scrollNumber < 2199
+                        ? "actives"
+                        : ""
+                    }`}
                     href="#aboutus"
                     onClick={() => handleClick("О нас")}
                   >
@@ -103,7 +99,11 @@ const Header = () => {
                 </li>
                 <li className={`site-nav-item `}>
                   <a
-                    className={`site-nav-link ${scrollNumber >= 2199 && scrollNumber < 2619 ? "actives" : ""}`}
+                    className={`site-nav-link ${
+                      scrollNumber >= 2199 && scrollNumber < 2619
+                        ? "actives"
+                        : ""
+                    }`}
                     href="#reviews"
                     onClick={() => handleClick("Отзывы")}
                   >
@@ -112,7 +112,11 @@ const Header = () => {
                 </li>
                 <li className={`site-nav-item`}>
                   <a
-                    className={`site-nav-link ${scrollNumber >= 2619 && scrollNumber < 3398 ? "actives" : ""}`}
+                    className={`site-nav-link ${
+                      scrollNumber >= 2619 && scrollNumber < 3398
+                        ? "actives"
+                        : ""
+                    }`}
                     href="#clients"
                     onClick={() => handleClick("Клиенты")}
                   >
@@ -121,7 +125,11 @@ const Header = () => {
                 </li>
                 <li className={`site-nav-item`}>
                   <a
-                    className={`site-nav-link ${scrollNumber >= 3398 && scrollNumber < 10000 ? "actives" : ""}`}
+                    className={`site-nav-link ${
+                      scrollNumber >= 3398 && scrollNumber < 10000
+                        ? "actives"
+                        : ""
+                    }`}
                     href="#contact"
                     onClick={() => handleClick("Контакты")}
                   >

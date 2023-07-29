@@ -1,14 +1,22 @@
-import { useState } from "react";
 import { useEffect } from "react";
+import { useState } from "react";
 
 function useScroll() {
-  const [scroll, setScroll] = useState();
+  const [scrollNumber, setScrollNumber] = useState()
+  
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  function myFunction() {
+    const scroll = document.documentElement.scrollTop;
+    setScrollNumber(scroll);
+  }
 
   useEffect(() => {
-    setScroll(window.scrollX);
-    console.log(window.scrollX,"bu hook ichidigi");
-  }, [window.scrollX]);
+    myFunction();
+  }, [scrollNumber]);
 
-  return [scroll];
+  return [scrollNumber];
 }
 export default useScroll;
