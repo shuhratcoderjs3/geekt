@@ -163,12 +163,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
   padding: 30px;
   width: 500px;
   min-height: 200px;
   background-color: #fff;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .conatact-modal-title{
@@ -176,6 +175,23 @@
   color: #000;
   text-align: center;
   font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.contact-modal-btn{
+  width: 100%;
+  text-align: center;
+  border: 1px solid #088242;
+  background-color: transparent;
+  padding: 10px 0px;
+  font-size: 20px;
+  color: #088242;
+  cursor: pointer;
+}
+
+.contact-modal-svg{
+  margin-top: -75px;
 }
 
 @media only screen and (max-width: 710px){

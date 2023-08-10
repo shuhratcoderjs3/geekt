@@ -16,20 +16,23 @@
 
 .client-category-title{
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
 .OurClient-list{
   display: flex;
   /* align-items: center; */
-  gap: 50px;
+  justify-content: space-between;
+  gap: 0px;
   flex-wrap: wrap;
 }
 
 .OurClient-item{
-  width: 150px;
+  width: 170px;
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 

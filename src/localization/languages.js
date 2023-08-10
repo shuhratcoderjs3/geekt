@@ -70,7 +70,9 @@ export const languages = {
       contact_form_lastname: "Familiya",
       contact_form_email: "Elektron pochta pochta",
       contact_form_text: "Xabar matni...",
-      contact_form_tel: "Telefon raqam"
+      contact_form_tel: "Telefon raqam",
+      contact_form_modal_title: "Muvaffaqiyatli!",
+      contact_form_modal_subtitle: "Siz bilan qisqa fursat ichida bog'lanamiz"
     }
   },
 
@@ -148,7 +150,9 @@ export const languages = {
       contact_form_lastname: "Фамилия",
       contact_form_email: "Эл. почта *",
       contact_form_text: "Текст сообщения...",
-      contact_form_tel: "Номер телефона"
+      contact_form_tel: "Номер телефона",
+      contact_form_modal_title: "Успешный!",
+      contact_form_modal_subtitle: "Мы свяжемся с Вами в скором времени"
     },
   },
 };
