@@ -9,6 +9,22 @@ const Modal = ({ isOpenModal, closeModal }) => {
   const [telNumber, setTelNumber] = useState("");
   const [showModal, setShowModal] = useState(false);
 
+    useEffect(() => {
+    if (isOpenModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    }, [isOpenModal]);
+
+    useEffect(() => {
+      if (showModal) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+      }, [showModal]);
+  
   const handleSendMessage = () => {
     const bot = {
       TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
@@ -50,13 +66,6 @@ Phone Number: ${telNumber}`,
     event.stopPropagation();
   };
 
-  useEffect(() => {
-    if (isOpenModal) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [isOpenModal]);
 
   const handleLastNameKeyPress = (e) => {
     const charCode = e.which || e.keyCode;

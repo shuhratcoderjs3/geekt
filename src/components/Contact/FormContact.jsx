@@ -21,13 +21,13 @@ const FormContact = () => {
   //   }
   // }, [showModal]);
 
-  // useEffect(() => {
-  //   if (showModal) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //   }
-  // }, [showModal]);
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showModal]);
 
   const handleSendMessage = () => {
     if (!firstName.trim() || !lastName.trim() || !phoneNumber.trim()) {
