@@ -29,43 +29,63 @@ import luxia from "../../assets/images/Logo/luxia.webp";
 import medicare from "../../assets/images/Logo/medicare.webp";
 import ImageComponent from "../ImgComponent";
 const OurClients = () => {
-  const clients = [
-    {
-      name: "TechnoShop",
-      src: TechnoShop,
-    },
-    {
-      name: "bp",
-      src: bp,
-    },
-    {
-      name: "Dono",
-      src: Dono,
-    },
-    {
-      name: "status",
-      src: status,
-    },
+  const mades = [
     {
       name: "Metallobond",
       src: Metallobond,
     },
     {
-      name: "Sultan",
-      src: Sultan,
-    },
-    {
-      name: "Do",
-      src: Do,
-    },
-    {
-      name: "Asia",
-      src: Asia,
-    },
-    {
       name: "Fidan",
       src: Fidan,
     },
+    {
+      name: "Medal",
+      src: Medal,
+    },
+    {
+      name: "Kiyim",
+      src: Kiyim,
+    },
+    {
+      name: "Elegant",
+      src: Elegant,
+    },
+  ];
+
+  const builds = [
+    {
+      name: "Discover",
+      src: Discover,
+    },
+    {
+      name: "GrandTash",
+      src: GrandTash,
+    },
+  ];
+
+  const services = [
+    {
+      name: "Reventt",
+      src: Reventt,
+    },
+    {
+      name: "Ailem",
+      src: Ailem,
+    },
+  ];
+
+  const medics = [
+    {
+      name: "bp",
+      src: bp,
+    },
+    {
+      name: "Sultan",
+      src: Sultan,
+    },
+  ];
+
+  const centers = [
     {
       name: "MediaTech",
       src: MediaTech,
@@ -75,52 +95,35 @@ const OurClients = () => {
       src: Bella,
     },
     {
-      name: "Discover",
-      src: Discover,
+      name: "Dono",
+      src: Dono,
+    },
+  ];
+
+  const solds = [
+    {
+      name: "Asia",
+      src: Asia,
     },
     {
-      name: "GrandTash",
-      src: GrandTash,
-    },
-    {
-      name: "Medal",
-      src: Medal,
-    },
-    {
-      name: "Ilevel",
-      src: Ilevel,
-    },
-    {
-      name: "UygaBozor",
-      src: UygaBozor,
-    },
-    {
-      name: "Insaat",
-      src: Insaat,
-    },
-    {
-      name: "Elegant",
-      src: Elegant,
-    },
-    {
-      name: "Reventt",
-      src: Reventt,
-    },
-    {
-      name: "Kiyim",
-      src: Kiyim,
+      name: "TechnoShop",
+      src: TechnoShop,
     },
     {
       name: "Smartlife",
       src: Smartlife,
     },
     {
-      name: "Ailem",
-      src: Ailem,
+      name: "Ilevel",
+      src: Ilevel,
     },
     {
       name: "Melita",
       src: Melita,
+    },
+    {
+      name: "Insaat",
+      src: Insaat,
     },
     {
       name: "luxia",
@@ -130,22 +133,100 @@ const OurClients = () => {
       name: "medicare",
       src: medicare,
     },
-    // Add other image objects here
+    {
+      name: "UygaBozor",
+      src: UygaBozor,
+    },
   ];
+
   const [lang, setLang] = useLocalization();
   return (
     <>
-         <section className="OurClients-section" id="clients">
+      <section className="OurClients-section" id="clients">
         <div className="container">
           <h2 className="OurClients-section-title">
             {languages[lang].Client.client_title}
           </h2>
           <ul className="OurClient-list">
-            {clients.map((client, index) => (
-              <li key={index} className="OurClient-item">
-                <ImageComponent styles="OurClient-item-img" imageUrl={client.src} alt={client.name} />
-              </li>
-            ))}
+            <li className="OurClient-item">
+              <h2 className="client-category-title">Ishlab chiqarish</h2>
+              {mades.map((made, index) => (
+                <div key={index}>
+                  <ImageComponent
+                    styles="OurClient-item-img"
+                    imageUrl={made.src}
+                    alt={made.name}
+                  />
+                </div>
+              ))}
+            </li>
+             <li className="OurClient-item">
+              <h2 className="client-category-title">Qurilish</h2>
+              {builds.map((build, index) => (
+                <div key={index}>
+                  <ImageComponent
+                    styles="OurClient-item-img"
+                    imageUrl={build.src}
+                    alt={build.name}
+                  />
+                </div>
+              ))}
+            </li>
+
+            <li className="OurClient-item">
+              <h2 className="client-category-title">Servis</h2>
+              {services.map((service, index) => (
+                <div key={index}>
+                  <ImageComponent
+                    styles="OurClient-item-img"
+                    imageUrl={service.src}
+                    alt={service.name}
+                  />
+                </div>
+              ))}
+            </li>
+
+            
+            <li className="OurClient-item">
+              <h2 className="client-category-title">Meditsina</h2>
+              {medics.map((medic, index) => (
+                <div key={index}>
+                  <ImageComponent
+                    styles="OurClient-item-img"
+                    imageUrl={medic.src}
+                    alt={medic.name}
+                  />
+                </div>
+              ))}
+            </li>
+
+            <li className="OurClient-item">
+              <h2 className="client-category-title">O'quv markazlari</h2>
+              {centers.map((center, index) => (
+                <div key={index}>
+                  <ImageComponent
+                    styles="OurClient-item-img"
+                    imageUrl={center.src}
+                    alt={center.name}
+                  />
+                </div>
+              ))}
+            </li>
+
+            <li className="OurClient-item">
+              <h2 className="client-category-title">Savdo sotiq</h2>
+              {solds.map((sold, index) => (
+                <div key={index}>
+                  <ImageComponent
+                    styles="OurClient-item-img"
+                    imageUrl={sold.src}
+                    alt={sold.name}
+                  />
+                </div>
+              ))}
+            </li>
+
+            
           </ul>
         </div>
       </section>

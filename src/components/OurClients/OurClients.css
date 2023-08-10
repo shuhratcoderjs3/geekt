@@ -14,13 +14,22 @@
   margin-bottom: 50px;
 }
 
+.client-category-title{
+  text-align: center;
+  margin-bottom: 15px;
+}
 
 .OurClient-list{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
   gap: 50px;
   flex-wrap: wrap;
+}
+
+.OurClient-item{
+  width: 150px;
+  display: flex;
+  flex-direction: column;
 }
 
 

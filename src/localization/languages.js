@@ -33,7 +33,7 @@ export const languages = {
       fakts_item_title1: "Yillik tajriba",
       fakts_item_title2: "Mutaxassislar",
       fakts_item_title3: "Har yili mijozlar",
-      fakts_item_title4: "Hamkorlar",
+      fakts_item_title4: "Outcoursing qilingan kompaniyalar umumiy 1oylik oboroti",
     },
     modal: {
       modal_title: "Biz bilan aloqa",
@@ -112,7 +112,7 @@ export const languages = {
       fakts_item_title1: "Лет опыта",
       fakts_item_title2: "Экспертов",
       fakts_item_title3: "Клиентов ежегодно",
-      fakts_item_title4: "Партнеров",
+      fakts_item_title4: "Общий месячный оборот аутсорсинговых компаний",
     },
     modal: {
       modal_title: "Связаться с нами",
