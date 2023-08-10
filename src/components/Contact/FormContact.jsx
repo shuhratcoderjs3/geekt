@@ -10,16 +10,16 @@ const FormContact = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    if (showModal) {
-      const timer = setTimeout(() => {
-        setShowModal(false); // Modalı kapat
-      }, 3000);
+  // useEffect(() => {
+  //   if (showModal) {
+  //     const timer = setTimeout(() => {
+  //       setShowModal(false); // Modalı kapat
+  //     }, 3000);
 
-      // Temizleme işlevi: Modal kapatıldığında zamanlayıcıyı temizle
-      return () => clearTimeout(timer);
-    }
-  }, [showModal]);
+  //     // Temizleme işlevi: Modal kapatıldığında zamanlayıcıyı temizle
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [showModal]);
 
   // useEffect(() => {
   //   if (showModal) {

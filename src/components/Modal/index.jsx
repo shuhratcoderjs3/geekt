@@ -8,20 +8,10 @@ const Modal = ({ isOpenModal, closeModal }) => {
   const [firstName, setFirstName] = useState("");
   const [telNumber, setTelNumber] = useState("");
   const [showModal, setShowModal] = useState(false);
-  useEffect(() => {
-    if (showModal) {
-      const timer = setTimeout(() => {
-        setShowModal(false); // Modalı kapat
-      }, 3000);
-
-      // Temizleme işlevi: Modal kapatıldığında zamanlayıcıyı temizle
-      return () => clearTimeout(timer);
-    }
-  }, [showModal]);
 
   const handleSendMessage = () => {
     const bot = {
-      TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA111",
+      TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
       chatID: "-1001855468600",
       message: `Full Name: ${firstName},
 Phone Number: ${telNumber}`,
