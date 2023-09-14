@@ -25,13 +25,12 @@ const Hero = () => {
             <p className="hero-section-subtitle">
               {languages[lang].hero.hero_subtitle}
             </p>
-            <button className="site-hero-btn" onClick={openModal}>
+            <a href="#contact" className="site-hero-btn" >
               {languages[lang].hero.hero_btn}
-            </button>
+            </a>
           </div>
         </div>
       </section>
-            <Modal isOpenModal={isOpenModal} closeModal={closeModal} />
     </>
   );
 };

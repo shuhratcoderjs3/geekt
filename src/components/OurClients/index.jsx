@@ -1,4 +1,7 @@
-import React from "react";
+import React,{ useState } from "react";
+
+
+
 import "./OurClients.css";
 import { languages } from "../../localization/languages";
 import { useLocalization } from "../../hooks/useLocalization";
@@ -29,126 +32,325 @@ import luxia from "../../assets/images/Logo/luxia.webp";
 import medicare from "../../assets/images/Logo/medicare.webp";
 import ImageComponent from "../ImgComponent";
 const OurClients = () => {
-  const mades = [
+
+  const [types , setTypes ] =  useState(null)
+ 
+
+  // const mades = [
+  //   {
+  //     name: "Metallobond",
+  //     src: Metallobond,
+  //   },
+  //   {
+  //     name: "Fidan",
+  //     src: Fidan,
+  //   },
+  //   {
+  //     name: "Medal",
+  //     src: Medal,
+  //   },
+  //   {
+  //     name: "Kiyim",
+  //     src: Kiyim,
+  //   },
+  //   {
+  //     name: "Elegant",
+  //     src: Elegant,
+  //   },
+  // ];
+
+  // const builds = [
+  //   {
+  //     name: "Discover",
+  //     src: Discover,
+  //   },
+  //   {
+  //     name: "GrandTash",
+  //     src: GrandTash,
+  //   },
+  // ];
+
+  // const services = [
+  //   {
+  //     name: "Reventt",
+  //     src: Reventt,
+  //   },
+  //   {
+  //     name: "Ailem",
+  //     src: Ailem,
+  //   },
+  // ];
+
+  // const medics = [
+  //   {
+  //     name: "bp",
+  //     src: bp,
+  //   },
+  //   {
+  //     name: "Sultan",
+  //     src: Sultan,
+  //   },
+  // ];
+
+  // const centers = [
+  //   {
+  //     name: "MediaTech",
+  //     src: MediaTech,
+  //   },
+  //   {
+  //     name: "Bella",
+  //     src: Bella,
+  //   },
+  //   {
+  //     name: "Dono",
+  //     src: Dono,
+  //   },
+  // ];
+
+  // // const solds = [
+  //   {
+  //     name: "Asia",
+  //     src: Asia,
+  //   },
+  //   {
+  //     name: "TechnoShop",
+  //     src: TechnoShop,
+  //   },
+  //   {
+  //     name: "Smartlife",
+  //     src: Smartlife,
+  //   },
+  //   {
+  //     name: "Ilevel",
+  //     src: Ilevel,
+  //   },
+  //   {
+  //     name: "Melita",
+  //     src: Melita,
+  //   },
+  //   {
+  //     name: "Insaat",
+  //     src: Insaat,
+  //   },
+  //   {
+  //     name: "luxia",
+  //     src: luxia,
+  //   },
+  //   {
+  //     name: "medicare",
+  //     src: medicare,
+  //   },
+  //   {
+  //     name: "UygaBozor",
+  //     src: UygaBozor,
+  //   },
+  // // ];
+
+
+  const click = (type) => {
+    setTypes(type)
+  }
+  // Sh_js code
+  const title = [
+     {
+      name: "Hammasi",
+      types: null
+    },
+    {
+      name: "Ishlab chiqarish",
+      type: "mades"
+    },
+    {
+      name: "Qurilish",
+      type: "builds"
+    },
+    {
+      name: "Servis",
+      type: "services"
+    },
+    {
+      name: "Meditsina",
+      type: "medics"
+    },
+    {
+      name: "O'quv markazlari",
+      type: "centers"
+    },
+    {
+      name: "Savdo sotiq",
+      type: "solds"
+
+    },
+   
+
+  ]
+
+  const clients = [
     {
       name: "Metallobond",
       src: Metallobond,
+      type: "mades"
     },
     {
       name: "Fidan",
       src: Fidan,
+      type: "mades"
+
     },
     {
       name: "Medal",
       src: Medal,
+      type: "mades"
+
     },
     {
       name: "Kiyim",
       src: Kiyim,
+      type: "mades"
+
     },
     {
       name: "Elegant",
       src: Elegant,
+      type: "mades"
     },
-  ];
-
-  const builds = [
     {
       name: "Discover",
       src: Discover,
+      type: "builds"
     },
     {
       name: "GrandTash",
       src: GrandTash,
-    },
-  ];
+      type: "builds"
 
-  const services = [
+    },
     {
       name: "Reventt",
       src: Reventt,
+      type: "services"
     },
     {
       name: "Ailem",
       src: Ailem,
-    },
-  ];
+      type: "services"
 
-  const medics = [
+    },
     {
       name: "bp",
       src: bp,
+      type: "medics"
     },
     {
       name: "Sultan",
       src: Sultan,
-    },
-  ];
+      type: "medics"
 
-  const centers = [
+    },
     {
       name: "MediaTech",
       src: MediaTech,
+      type: "centers"
     },
     {
       name: "Bella",
       src: Bella,
+      type: "centers"
+
+
     },
     {
       name: "Dono",
       src: Dono,
-    },
-  ];
+      type: "centers"
 
-  const solds = [
+    },
     {
       name: "Asia",
       src: Asia,
+      type: 'solds'
+
     },
     {
       name: "TechnoShop",
       src: TechnoShop,
+      type: 'solds'
+
     },
     {
       name: "Smartlife",
       src: Smartlife,
+      type: 'solds'
+
     },
     {
       name: "Ilevel",
       src: Ilevel,
+      type: 'solds'
+
     },
     {
       name: "Melita",
       src: Melita,
+      type: 'solds'
+
     },
     {
       name: "Insaat",
       src: Insaat,
+      type: 'solds'
+
     },
     {
       name: "luxia",
       src: luxia,
+      type: 'solds'
+
     },
     {
       name: "medicare",
       src: medicare,
+      type: 'solds'
+
     },
     {
       name: "UygaBozor",
       src: UygaBozor,
+      type: 'solds'
     },
-  ];
-
+  ]
   const [lang, setLang] = useLocalization();
   return (
     <>
+        
       <section className="OurClients-section" id="clients">
         <div className="container">
           <h2 className="OurClients-section-title">
             {languages[lang].Client.client_title}
           </h2>
+          <div>
+            <ul className={`client-category`} >
+               {
+                title.map(({name, type}, index) =>{
+
+                //  if(type == null)  return (
+                //     <li key={name} onClick={()=> click(type)} className ='active' >
+                //        <h3 className="client-category-title" >{name} </h3>
+                //   </li>
+                //   )
+                  
+                  return (
+                    <li key={name} onClick={()=> click(type)} className ={types == type ?  " active" : '' } >
+                      <h3 className="client-category-title" >{name} </h3>
+                    </li>
+                  )
+                })
+
+               }
+            </ul>
+          </div>
           <ul className="OurClient-list">
-            <li className="OurClient-item">
+            {/* <li className="OurClient-item">
               <h2 className="client-category-title">Ishlab chiqarish</h2>
               {mades.map((made, index) => (
                 <div key={index}>
@@ -224,14 +426,45 @@ const OurClients = () => {
                   />
                 </div>
               ))}
-            </li>
+            </li> */}
 
+              {
+                clients.filter(({name, src, type})=>!types? true : type === types).map(({name, src, type})=>{
+
+                  if (type === types ){ 
+                    return  (
+                    <li className="OurClient-item" key={name}>
+                        <ImageComponent
+                        styles="OurClient-item-img"
+                        imageUrl={src}
+                        alt={name}
+                        className={type}
+                      />
+                    </li>
+                  )}
+
+                  return (
+                    <li className="OurClient-item" key={name}>
+                        <ImageComponent
+                        styles="OurClient-item-img"
+                        imageUrl={src}
+                        alt={name}
+                        className={type}
+                      />
+                    </li>
+                  )
+                }
+
+                
+                )
+              }
             
           </ul>
         </div>
       </section>
     </>
-  );
+   
+  )
 };
 
 export default OurClients;

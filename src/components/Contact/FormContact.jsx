@@ -30,10 +30,10 @@ const FormContact = () => {
   }, [showModal]);
 
   const handleSendMessage = () => {
-    if (!firstName.trim() || !lastName.trim() || !phoneNumber.trim()) {
-      alert("Please fill in all required fields.");
-      return;
-    }
+      if (!firstName) {
+    // Inputlardan biri to'ldirilmagan bo'lsa, jo'natishni to'xtatamiz
+    return;
+  }
 
     const bot = {
       TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
@@ -90,7 +90,7 @@ Phone Number: ${phoneNumber.replace(/[\(\)]/g, "")}`,
       <div className="contact-form">
         <div className="input-box-end">
           <p className="placeholder-title">
-            {languages[lang].Contact.contact_form_name}
+            {languages[lang].modal.input_name}
           </p>
           <input
             value={firstName}

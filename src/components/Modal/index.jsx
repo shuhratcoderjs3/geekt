@@ -9,27 +9,27 @@ const Modal = ({ isOpenModal, closeModal }) => {
   const [telNumber, setTelNumber] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     if (isOpenModal) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-    }, [isOpenModal]);
+  }, [isOpenModal]);
 
-    useEffect(() => {
-      if (showModal) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "auto";
-      }
-      }, [showModal]);
-  
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showModal]);
+
   const handleSendMessage = () => {
     const bot = {
       TOKEN: "5804908423:AAH5Pg79BuEHjxnjPTsmZyIfJmE8EeGXkvA",
       chatID: "-1001855468600",
-      message: `Full Name: ${firstName},
+      message: `Kompaniya nomi: ${firstName},
 Phone Number: ${telNumber}`,
     };
 
@@ -65,7 +65,6 @@ Phone Number: ${telNumber}`,
   const handleModalClick = (event) => {
     event.stopPropagation();
   };
-
 
   const handleLastNameKeyPress = (e) => {
     const charCode = e.which || e.keyCode;

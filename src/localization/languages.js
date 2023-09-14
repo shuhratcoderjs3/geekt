@@ -14,7 +14,7 @@ export const languages = {
       hero_title: "Biznesingizni raqamlarda ko`ring!",
       hero_subtitle:
         "Ortiqcha xarajatlarni optimallashtiramiz va foydangizni oshiramiz!​",
-      hero_btn: "Qo'ng'iroq qiling",
+      hero_btn: "Ro'yxatdan o'tish",
     },
     hizmatlar: {
       services_title: "Xizmatlar",
@@ -67,7 +67,7 @@ export const languages = {
       contact_address: "Cho’ponota ko’chasi 43",
       contact_email: "info@mysite.ru",
       contact_form_name: "Ism",
-      contact_form_lastname: "Familiya",
+      contact_form_lastname: "Komaniya nomi",
       contact_form_email: "Elektron pochta pochta",
       contact_form_text: "Xabar matni...",
       contact_form_tel: "Telefon raqam",
@@ -94,7 +94,7 @@ export const languages = {
     hero: {
       hero_title: "Посмотрите на свой бизнес в цифрах!",
       hero_subtitle: "Мы оптимизируем лишние расходы и увеличим Вашу прибыль!​",
-      hero_btn: "Позвонить",
+      hero_btn: "Зарегистрироваться",
     },
 
     hizmatlar: {
@@ -147,7 +147,7 @@ export const languages = {
       contact_email: "info@mysite.ru",
       contact_tel: "+998 77 009 08 94",
       contact_form_name: "Имя",
-      contact_form_lastname: "Фамилия",
+      contact_form_lastname: "Название компании",
       contact_form_email: "Эл. почта *",
       contact_form_text: "Текст сообщения...",
       contact_form_tel: "Номер телефона",

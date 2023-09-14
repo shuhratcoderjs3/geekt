@@ -1,5 +1,5 @@
 .hero-section {
-  padding-top: 230px;
+  padding-top: 200px;
   padding-bottom: 100px;
   background-image: url(../../assets/images/background-hero.webp);
   background-position: center;
@@ -7,7 +7,7 @@
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 105vh;
+  /* height: 105vh; */
 }
 
 .hero-section-title {

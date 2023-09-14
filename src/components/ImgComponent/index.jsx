@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-const ImageComponent = ({ imageUrl, styles }) => {
+import './style.css'
+const ImageComponent = (props) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  
+  const { imageUrl, styles , className} = props
   useEffect(() => {
     const loadImage = () => {
       const img = new Image();
@@ -23,7 +25,7 @@ const ImageComponent = ({ imageUrl, styles }) => {
     return <div>{error}</div>;
   }
 
-  return <img src={imageUrl} alt="img" className={styles} />;
+  return <img  {...props} src={imageUrl} alt="img" className={styles + " " + className}  />;
 };
 
 export default ImageComponent;

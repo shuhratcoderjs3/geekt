@@ -77,6 +77,9 @@
   color: #003f34;
   cursor: pointer;
 }
+.site-header-btn a {
+  color: #003f34;
+}
 
 .actives{
   color: #FFCA2F;

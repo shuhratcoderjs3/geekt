@@ -150,10 +150,10 @@ const Header = () => {
                 <option value="ru">Ru</option>
               </select>
               <div>
-                <button onClick={openModal} className="site-header-btn">
-                  {languages[lang].hero.hero_btn}
+                <button  className="site-header-btn">
+                 <a href="tel:+998770090894">+998 77 009 08 94 </a>
                 </button>
-                <Modal isOpenModal={isOpenModal} closeModal={closeModal} />
+               
               </div>
               <button className="burger-btn" onClick={handleOpenMenu}>
                 <svg
@@ -240,7 +240,7 @@ const Header = () => {
               </li>
               <li className="site-nav-item-burger">
                 <a className="site-nav-link-burger" href="#contact">
-                  {languages[lang].header.nav.navItem6}
+                  {languages[lang].header.nav.navItem6} 
                 </a>
               </li>
             </ul>
