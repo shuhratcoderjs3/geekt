@@ -194,19 +194,29 @@
   }
 
   .client-category li.active::after{
-    content: "";
+    /* content: "";
     width: 0;
     height: 0;
-    border-width: 5px 4px 0 4px;
-    border:  solid transparent;
-    border-top: 5px solid #000;
+    border: 40px solid transparent;
+    border
+    border-top:  solid #000 ;
     display: block;
     position: absolute; 
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    transition: transform .3s;
-
+    transition: transform .3s; */
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url('../../assets/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 
 
   }
