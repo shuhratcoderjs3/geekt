@@ -28,6 +28,7 @@
   border-bottom: 2px solid rgba(0, 0, 0, .2);
   text-align: center;
   width: 100%;
+  cursor: pointer;
   
 }
 .client-category li.active{
@@ -94,6 +95,7 @@
 
   .client-category {
     margin-bottom: 20px;
+
   }
   .client-category li{
     margin-bottom: 5px;
@@ -149,11 +151,79 @@
   }
 
   .client-category{
-    overflow-x: scroll;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 0;
+    border: 1px solid #000 ;
+    justify-content: center;
+    z-index: 1;
+    padding: 1px 0 ;
+     
+  }
+  
+
+  .client-category.open {
+    height: auto;
   }
   .client-category li {
-     margin-bottom: 5px;
-     padding: 0 10px;
+     padding: 0 ;
+     padding-left: 10px ;
+     background-color: #fff;
+     position: absolute;
+     margin: 0;
+     
+     
+  }
+  .client-category.open li {
+    position: relative;
+    height: 100%;
+    border: none;
+   
+
+  }
+ 
+  .client-category li.active{
+    position: relative;
+    z-index: 1; 
+    border: none;
+    order: -1;
+    margin-bottom: 0;
+
+    
+  }
+
+  .client-category li.active::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 5px 4px 0 4px;
+    border:  solid transparent;
+    border-top: 5px solid #000;
+    display: block;
+    position: absolute; 
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform .3s;
+
+
+
+  }
+  /* .client-category.open li.active::after{
+    transform: rotate(180deg);
+
+  } */
+  .client-category li h3 {
+    text-align: start ;
+    height: 100%;
+    margin: 0;
+    padding: 10px 0;
+    
+    
+  }
+  .client-category li h3:hover{
+    background: rgba(255, 255, 255, .2);
   }
   
 }

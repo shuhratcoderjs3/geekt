@@ -34,7 +34,7 @@ import ImageComponent from "../ImgComponent";
 const OurClients = () => {
 
   const [types , setTypes ] =  useState(null)
- 
+  const [open , setOpen]= useState(false)
 
   // const mades = [
   //   {
@@ -148,7 +148,8 @@ const OurClients = () => {
 
 
   const click = (type) => {
-    setTypes(type)
+    setTypes(type);
+    setOpen(prev => !prev)
   }
   // Sh_js code
   const title = [
@@ -329,7 +330,7 @@ const OurClients = () => {
             {languages[lang].Client.client_title}
           </h2>
           <div>
-            <ul className={`client-category`} >
+            <ul className={`client-category  ${+ open ? "open" : ""} ` } >
                {
                 title.map(({name, type}, index) =>{
 
@@ -340,7 +341,7 @@ const OurClients = () => {
                 //   )
                   
                   return (
-                    <li key={name} onClick={()=> click(type)} className ={types == type ?  " active" : '' } >
+                    <li key={name} onClick={()=> click(type)} id={index === 0 ? "all" : "" } className ={ types == type ?  " active" : '' } >
                       <h3 className="client-category-title" >{name} </h3>
                     </li>
                   )
